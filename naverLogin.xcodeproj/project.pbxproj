@@ -8,17 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		336D457314F8ED89DCBA11B6 /* Pods_naverLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753931F7EA0524751CAD6B63 /* Pods_naverLogin.framework */; };
+		5800986927747AB50027432C /* MyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986827747AB50027432C /* MyInfo.swift */; };
+		5800986B27748AAB0027432C /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986A27748AAB0027432C /* SectionCell.swift */; };
+		5800986E27748AE30027432C /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986C27748AE30027432C /* InfoSection.swift */; };
+		5800986F27748AE30027432C /* InfoSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5800986D27748AE30027432C /* InfoSection.xib */; };
 		588BD1EF27733BBF001E6BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1EE27733BBF001E6BA8 /* AppDelegate.swift */; };
 		588BD1F127733BBF001E6BA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1F027733BBF001E6BA8 /* SceneDelegate.swift */; };
 		588BD1F327733BBF001E6BA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1F227733BBF001E6BA8 /* LoginViewController.swift */; };
 		588BD1F627733BBF001E6BA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588BD1F427733BBF001E6BA8 /* Main.storyboard */; };
 		588BD1F827733BBF001E6BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 588BD1F727733BBF001E6BA8 /* Assets.xcassets */; };
 		588BD1FB27733BBF001E6BA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 588BD1F927733BBF001E6BA8 /* LaunchScreen.storyboard */; };
+		589C37F7277420C800077218 /* FoodRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C37F6277420C800077218 /* FoodRequest.swift */; };
+		589C37F92774222F00077218 /* FoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C37F82774222F00077218 /* FoodResponse.swift */; };
+		589C37FB277427BA00077218 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C37FA277427BA00077218 /* Constant.swift */; };
+		589C38202774540000077218 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C381E2774540000077218 /* MainCollectionViewCell.swift */; };
+		589C38212774540000077218 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589C381F2774540000077218 /* MainCollectionViewCell.xib */; };
 		58C65029277364E800D252AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C65028277364E800D252AB /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F0456120AC31CC6B071B290 /* Pods-naverLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naverLogin.release.xcconfig"; path = "Target Support Files/Pods-naverLogin/Pods-naverLogin.release.xcconfig"; sourceTree = "<group>"; };
+		5800986827747AB50027432C /* MyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfo.swift; sourceTree = "<group>"; };
+		5800986A27748AAB0027432C /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
+		5800986C27748AE30027432C /* InfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSection.swift; sourceTree = "<group>"; };
+		5800986D27748AE30027432C /* InfoSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoSection.xib; sourceTree = "<group>"; };
 		588BD1EB27733BBF001E6BA8 /* naverLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naverLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588BD1EE27733BBF001E6BA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		588BD1F027733BBF001E6BA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +40,11 @@
 		588BD1F727733BBF001E6BA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		588BD1FA27733BBF001E6BA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		588BD1FC27733BBF001E6BA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		589C37F6277420C800077218 /* FoodRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRequest.swift; sourceTree = "<group>"; };
+		589C37F82774222F00077218 /* FoodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResponse.swift; sourceTree = "<group>"; };
+		589C37FA277427BA00077218 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		589C381E2774540000077218 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		589C381F2774540000077218 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
 		58C65028277364E800D252AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		62034FE2D5A57F44CA23EAF4 /* Pods-naverLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naverLogin.debug.xcconfig"; path = "Target Support Files/Pods-naverLogin/Pods-naverLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		753931F7EA0524751CAD6B63 /* Pods_naverLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_naverLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +62,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5800987027748C780027432C /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				5800986827747AB50027432C /* MyInfo.swift */,
+				5800986C27748AE30027432C /* InfoSection.swift */,
+				5800986D27748AE30027432C /* InfoSection.xib */,
+				5800986A27748AAB0027432C /* SectionCell.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
 		588BD1E227733BBE001E6BA8 = {
 			isa = PBXGroup;
 			children = (
@@ -65,16 +94,46 @@
 		588BD1ED27733BBF001E6BA8 /* naverLogin */ = {
 			isa = PBXGroup;
 			children = (
-				588BD1EE27733BBF001E6BA8 /* AppDelegate.swift */,
-				588BD1F027733BBF001E6BA8 /* SceneDelegate.swift */,
-				588BD1F227733BBF001E6BA8 /* LoginViewController.swift */,
+				589C38232774573800077218 /* Login */,
+				589C38242774574F00077218 /* FoodRequest */,
+				589C38222774572200077218 /* MainCollectionView */,
 				58C65028277364E800D252AB /* MainViewController.swift */,
 				588BD1F427733BBF001E6BA8 /* Main.storyboard */,
+				5800987027748C780027432C /* Info */,
 				588BD1F727733BBF001E6BA8 /* Assets.xcassets */,
 				588BD1F927733BBF001E6BA8 /* LaunchScreen.storyboard */,
 				588BD1FC27733BBF001E6BA8 /* Info.plist */,
+				588BD1F027733BBF001E6BA8 /* SceneDelegate.swift */,
+				588BD1EE27733BBF001E6BA8 /* AppDelegate.swift */,
 			);
 			path = naverLogin;
+			sourceTree = "<group>";
+		};
+		589C38222774572200077218 /* MainCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				589C381E2774540000077218 /* MainCollectionViewCell.swift */,
+				589C381F2774540000077218 /* MainCollectionViewCell.xib */,
+			);
+			path = MainCollectionView;
+			sourceTree = "<group>";
+		};
+		589C38232774573800077218 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				588BD1F227733BBF001E6BA8 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		589C38242774574F00077218 /* FoodRequest */ = {
+			isa = PBXGroup;
+			children = (
+				589C37F6277420C800077218 /* FoodRequest.swift */,
+				589C37FA277427BA00077218 /* Constant.swift */,
+				589C37F82774222F00077218 /* FoodResponse.swift */,
+			);
+			path = FoodRequest;
 			sourceTree = "<group>";
 		};
 		790BF6EB4148479464A7BEB6 /* Pods */ = {
@@ -157,6 +216,8 @@
 				588BD1FB27733BBF001E6BA8 /* LaunchScreen.storyboard in Resources */,
 				588BD1F827733BBF001E6BA8 /* Assets.xcassets in Resources */,
 				588BD1F627733BBF001E6BA8 /* Main.storyboard in Resources */,
+				589C38212774540000077218 /* MainCollectionViewCell.xib in Resources */,
+				5800986F27748AE30027432C /* InfoSection.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +270,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589C37FB277427BA00077218 /* Constant.swift in Sources */,
+				5800986E27748AE30027432C /* InfoSection.swift in Sources */,
+				5800986927747AB50027432C /* MyInfo.swift in Sources */,
+				589C37F92774222F00077218 /* FoodResponse.swift in Sources */,
+				5800986B27748AAB0027432C /* SectionCell.swift in Sources */,
 				588BD1F327733BBF001E6BA8 /* LoginViewController.swift in Sources */,
+				589C38202774540000077218 /* MainCollectionViewCell.swift in Sources */,
+				589C37F7277420C800077218 /* FoodRequest.swift in Sources */,
 				588BD1EF27733BBF001E6BA8 /* AppDelegate.swift in Sources */,
 				588BD1F127733BBF001E6BA8 /* SceneDelegate.swift in Sources */,
 				58C65029277364E800D252AB /* MainViewController.swift in Sources */,
