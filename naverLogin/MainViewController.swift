@@ -19,10 +19,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
-   
-    
-    
-    
     
     var images: [String] = ["배너1", "배너2", "배너3", "배너4", "배너5", "배너6"]
     var foodImages: [String] = ["음식", "음식", "음식", "음식", "음식", "음식", "음식", "음식", "음식"]
@@ -84,7 +80,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
     }
     
     func didSuccess(_ response: FoodResponse) {
-        let data = response.row[0].RESTRT_NM
+        let data = response.PlaceThatDoATasteyFoodSt[1].row[2].RESTRT_NM
         self.testLabel.text = data
         
     }
