@@ -9,38 +9,29 @@ import Foundation
 
 
 struct FoodResponse: Decodable {
-    
-    var PlaceThatDoATasteyFoodSt: [PlaceThatDoATasteyFoodSt]
+
+    let getSafeRestaurantList: GetSafeRestaurantList
 }
 
-struct PlaceThatDoATasteyFoodSt: Decodable {
-    var head: [head]
-    var row: [row]
-}
+struct GetSafeRestaurantList: Decodable {
+//    let header: header
+    let item: [item]
+//    let numOfRows: Int
+//    let pageNo: Int
+//    let totalCount: Int
 
-struct head: Decodable {
-    var list_total_count: Int
-    var RESULT: [RESULT]
-    var api_version: String
-}
+    }
 
-struct RESULT: Decodable {
-    var CODE: String
-    var MESSAGE: String
-}
+//    struct header: Decodable {
+//        let code: String
+//        let message: String
+//    }
 
-struct row: Decodable {
-    var SIGUN_NM: String
-    var SIGUN_CD: String
-    var RESTRT_NM: String
-    var REPRSNT_FOOD_NM: String
-    var TASTFDPLC_TELNO: String
-    var RM_MATR: String?
-    var REFINE_LOTNO_ADDR: String
-    var REFINE_ROADNM_ADDR: String
-    var REFINE_ZIP_CD: String
-    var REFINE_WGS84_LOGT: String
-    var REFINE_WGS84_LAT: String
+    struct item: Decodable {
+        let biz_nm: String
+//        let addrs: String
+//        let biz_tel: String
+//        let geom: String
 }
 
 

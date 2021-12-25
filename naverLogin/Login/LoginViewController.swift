@@ -48,9 +48,9 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
         loginInstance?.requestThirdPartyLogin()
             //로그인 시 다른 뷰컨트롤러로 이동
         
-//        guard let navigation = UIStoryboard(name: "LoginView", bundle: nil).instantiateViewController(identifier: "LoginViewNavigationController") as? LoginViewNavigationController else { return }
-//        navigation.modalPresentationStyle = .overFullScreen
-//        self.present(navigation, animated: true, completion: nil)
+        guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
+        navigation.modalPresentationStyle = .overFullScreen
+        self.present(navigation, animated: true, completion: nil)
         
 
     }
@@ -62,6 +62,9 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
                 }
                 else {
                     print("loginWithKakaoAccount() success.")
+                    guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
+                    navigation.modalPresentationStyle = .overFullScreen
+                    self.present(navigation, animated: true, completion: nil)
 
                     _ = oauthToken
                 }

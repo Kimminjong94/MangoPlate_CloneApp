@@ -10,6 +10,8 @@ import Alamofire
 
 class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var foods = [FoodRequest]()
+    var collectionCell = MainCollectionViewCell()
 
 
     @IBOutlet weak var testLabel: UILabel!
@@ -20,8 +22,13 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
     @IBOutlet weak var collectionView: UICollectionView!
     
     
+    var food: [String] = []
+
+    
+    
     var images: [String] = ["배너1", "배너2", "배너3", "배너4", "배너5", "배너6"]
-    var foodImages: [String] = ["음식", "음식", "음식", "음식", "음식", "음식", "음식", "음식", "음식"]
+    var foodImages: [String] = ["음식", "음식", "음식", "음식", "음식", "음식"]
+    var foodName: [String] = []
     var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
 
     override func viewDidLoad() {
@@ -46,8 +53,11 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: "cell")
         
-        FoodRequest().getFoodData(self)
+        collectionView.dataSource = self
         
+        FoodRequest().getFoodData(self)
+        self.collectionView.reloadData()
+
         
     }
     
@@ -79,11 +89,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         pageControl.currentPage = Int(pageNumber)
     }
     
-    func didSuccess(_ response: FoodResponse) {
-        let data = response.PlaceThatDoATasteyFoodSt[1].row[2].RESTRT_NM
-        self.testLabel.text = data
-        
-    }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foodImages.count
@@ -95,10 +101,20 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MainCollectionViewCell
         cell.image.image = UIImage(named: foodImages[indexPath.row])
         
-            
-        
-        
+
         return cell
     }
+    
+    func didSuccess(_ response: FoodResponse) {
+        
+        let data = response.getSafeRestaurantList.item[0].biz_nm
+        
+        foodName.append(data)
+//        self.nameLabel.text = data
+        collectionCell.nameLabel.text = data
+
+    }
+    
+
     
 }
