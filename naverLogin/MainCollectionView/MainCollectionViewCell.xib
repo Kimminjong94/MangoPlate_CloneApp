@@ -21,25 +21,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="177" height="202.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부산 연제구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yZ-SX-Qqf">
-                                <rect key="frame" x="18" y="174" width="78" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="5" y="164" width="91" height="30.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak1-pe-f2w">
-                                <rect key="frame" x="122" y="162" width="32" height="26.5"/>
+                                <rect key="frame" x="132" y="162" width="35" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.87843137979999997" green="0.5411764979" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동래밀면" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Eg-GE-Dti">
-                                <rect key="frame" x="18" y="151" width="59" height="20.5"/>
+                                <rect key="frame" x="5" y="151" width="149" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="음식" translatesAutoresizingMaskIntoConstraints="NO" id="FgZ-r9-jSF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="음식" translatesAutoresizingMaskIntoConstraints="NO" id="FgZ-r9-jSF">
                                 <rect key="frame" x="-8" y="0.0" width="185" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="좋아요갯수" translatesAutoresizingMaskIntoConstraints="NO" id="JZu-b1-Qfq">
+                                <rect key="frame" x="5" y="182" width="73" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -52,17 +56,17 @@
                 <constraint firstItem="phi-R8-bab" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1bJ-iH-0Qj"/>
                 <constraint firstItem="ak1-pe-f2w" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="118" id="23i-Ke-GAT"/>
                 <constraint firstAttribute="trailing" secondItem="phi-R8-bab" secondAttribute="trailing" id="Fz1-B6-QuS"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="ak1-pe-f2w" secondAttribute="trailing" constant="23" id="Io1-ZH-YEM"/>
-                <constraint firstItem="1yZ-SX-Qqf" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="130" id="KOc-5Q-a3M"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="ak1-pe-f2w" secondAttribute="trailing" constant="10" id="Io1-ZH-YEM"/>
+                <constraint firstItem="1yZ-SX-Qqf" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="120" id="KOc-5Q-a3M"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="1yZ-SX-Qqf" secondAttribute="bottom" constant="14.5" id="RRp-BA-Hue"/>
-                <constraint firstItem="1yZ-SX-Qqf" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="18" id="SKu-pw-k4C"/>
+                <constraint firstItem="1yZ-SX-Qqf" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="5" id="SKu-pw-k4C"/>
                 <constraint firstAttribute="bottom" secondItem="phi-R8-bab" secondAttribute="bottom" constant="6.5" id="UxY-8f-rU3"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="ak1-pe-f2w" secondAttribute="bottom" constant="20.5" id="Xr3-88-zXa"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="8Eg-GE-Dti" secondAttribute="trailing" constant="100" id="bmV-Xw-Utd"/>
-                <constraint firstItem="ak1-pe-f2w" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="122" id="cGV-DJ-vXj"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="8Eg-GE-Dti" secondAttribute="trailing" constant="23" id="bmV-Xw-Utd"/>
+                <constraint firstItem="ak1-pe-f2w" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="132" id="cGV-DJ-vXj"/>
                 <constraint firstItem="phi-R8-bab" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hYh-LB-Dgl"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="1yZ-SX-Qqf" secondAttribute="trailing" constant="81" id="i86-jQ-4C1"/>
-                <constraint firstItem="8Eg-GE-Dti" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="18" id="mJJ-dt-DqW"/>
+                <constraint firstItem="8Eg-GE-Dti" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="5" id="mJJ-dt-DqW"/>
                 <constraint firstItem="8Eg-GE-Dti" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="107" id="nZv-Sw-zXz"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="8Eg-GE-Dti" secondAttribute="bottom" constant="37.5" id="oiz-Mn-0Q9"/>
             </constraints>
@@ -78,6 +82,7 @@
     </objects>
     <resources>
         <image name="음식" width="471" height="464"/>
+        <image name="좋아요갯수" width="302" height="41"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

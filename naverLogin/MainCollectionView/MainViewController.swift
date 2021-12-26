@@ -27,7 +27,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
     
     
     var images: [String] = ["배너1", "배너2", "배너3", "배너4", "배너5", "배너6"]
-    var foodImages: [String] = ["음식", "음식", "음식", "음식", "음식", "음식"]
+    var foodImages: [String] = ["음식1", "음식2", "음식3", "음식4", "음식5", "음식", "음식1", "음식2", "음식3", "음식4", "음식5"]
     var foodName: [String] = []
     var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
 
@@ -55,8 +55,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         
         collectionView.dataSource = self
         
-        FoodRequest().getFoodData(self)
-        self.collectionView.reloadData()
 
         
     }
@@ -101,19 +99,12 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MainCollectionViewCell
         cell.image.image = UIImage(named: foodImages[indexPath.row])
         
+        //여기서 didsucces함수를 불러오는게 가능한가?
 
         return cell
     }
     
-    func didSuccess(_ response: FoodResponse) {
-        
-        let data = response.getSafeRestaurantList.item[0].biz_nm
-        
-        foodName.append(data)
-//        self.nameLabel.text = data
-        collectionCell.nameLabel.text = data
 
-    }
     
 
     

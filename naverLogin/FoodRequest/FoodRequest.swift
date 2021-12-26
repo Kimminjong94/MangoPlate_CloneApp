@@ -11,7 +11,10 @@ import UIKit
 
 
 class FoodRequest {
-    func getFoodData(_ viewController: MainViewController) {
+    
+    
+    
+    func getFoodData(_ viewController: MainCollectionViewCell) {
 
         let url = "http://apis.data.go.kr/6260000/BusanSafeRestaurantService/getSafeRestaurantList?serviceKey=XOCSn1qJ48M00E3tw8OTGkY5WMa6ifqinWOVMJTVOe5yX7nbm%2FazNu1XhooNP3WRWHdhaKz%2Byxg%2Fc8Bk%2B%2BRWeQ%3D%3D&pageNo=1&numOfRows=10&resultType=json"
 

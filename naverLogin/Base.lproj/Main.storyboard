@@ -180,26 +180,17 @@
                                                     <outlet property="delegate" destination="46T-cQ-0Tm" id="1og-BA-ViH"/>
                                                 </connections>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TEt-gd-Ko5">
-                                                <rect key="frame" x="125" y="160" width="63" height="42"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Mqt-YH-0Qd" firstAttribute="leading" secondItem="TXB-23-ZuD" secondAttribute="leading" id="0G3-KG-bhn"/>
                                             <constraint firstAttribute="trailing" secondItem="a31-TD-wOs" secondAttribute="trailing" constant="330" id="1L5-cr-HJD"/>
                                             <constraint firstAttribute="height" constant="717" id="D9Z-Eq-1kX"/>
-                                            <constraint firstItem="TEt-gd-Ko5" firstAttribute="top" secondItem="Yzi-DT-e8d" secondAttribute="bottom" constant="4" id="Ftp-5t-9Hs"/>
                                             <constraint firstAttribute="trailing" secondItem="Upv-WF-gcs" secondAttribute="trailing" id="HNH-GE-NVS"/>
                                             <constraint firstItem="a31-TD-wOs" firstAttribute="leading" secondItem="TXB-23-ZuD" secondAttribute="leading" constant="15" id="KfH-K0-I3y"/>
                                             <constraint firstItem="Yzi-DT-e8d" firstAttribute="top" secondItem="TXB-23-ZuD" secondAttribute="top" id="LMl-Zz-qXz"/>
                                             <constraint firstItem="Upv-WF-gcs" firstAttribute="top" secondItem="oTj-sB-Ptz" secondAttribute="bottom" constant="5" id="N9l-xs-kmc"/>
                                             <constraint firstItem="oTj-sB-Ptz" firstAttribute="top" secondItem="Yzi-DT-e8d" secondAttribute="bottom" constant="8" symbolic="YES" id="Qfn-7K-72D"/>
-                                            <constraint firstItem="Yzi-DT-e8d" firstAttribute="leading" secondItem="TEt-gd-Ko5" secondAttribute="trailing" constant="-188" id="R1D-zg-vSU"/>
                                             <constraint firstAttribute="bottom" secondItem="Mqt-YH-0Qd" secondAttribute="bottom" id="RUg-6V-FXe"/>
                                             <constraint firstItem="0bL-k6-3eZ" firstAttribute="leading" secondItem="oTj-sB-Ptz" secondAttribute="trailing" constant="5" id="U9y-U3-kls"/>
                                             <constraint firstItem="0bL-k6-3eZ" firstAttribute="top" secondItem="Yzi-DT-e8d" secondAttribute="bottom" constant="8" symbolic="YES" id="WJl-Oh-xTh"/>
@@ -238,7 +229,6 @@
                         <outlet property="collectionView" destination="Mqt-YH-0Qd" id="BFX-EG-lUO"/>
                         <outlet property="pageControl" destination="590-bB-ffU" id="Nl3-oI-FP7"/>
                         <outlet property="scrollView" destination="Yzi-DT-e8d" id="9Wn-X1-EfK"/>
-                        <outlet property="testLabel" destination="TEt-gd-Ko5" id="mI7-EV-qfl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTD-pK-z8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -464,44 +454,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="W1s-4D-Uej">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="연말배너1" translatesAutoresizingMaskIntoConstraints="NO" id="8ox-pq-ryP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="223"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lhy-g2-1xX">
-                                    <size key="itemSize" width="188" height="163"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PickCollectionViewCell" id="qRl-pF-sSF" customClass="PickCollectionViewCell" customModule="naverLogin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="163"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UEJ-pM-nky">
-                                            <rect key="frame" x="0.0" y="0.0" width="188" height="163"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MMQ-sd-ESX">
-                                                    <rect key="frame" x="3" y="12" width="183" height="138"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="188" height="163"/>
-                                        <connections>
-                                            <outlet property="imageView" destination="MMQ-sd-ESX" id="edc-WR-LGH"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="연말배너2" translatesAutoresizingMaskIntoConstraints="NO" id="vl3-xm-9fV">
+                                <rect key="frame" x="0.0" y="275" width="414" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="연말배너3" translatesAutoresizingMaskIntoConstraints="NO" id="t0j-P6-xSY">
+                                <rect key="frame" x="0.0" y="506" width="414" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w0F-UN-5Op"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="collectionView" destination="W1s-4D-Uej" id="kGQ-rV-4mz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwb-1V-orl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -514,13 +482,60 @@
                     <view key="view" contentMode="scaleToFill" id="VBw-mK-Mek">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zyx-eI-YRP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2ev-C1-5FI">
+                                    <size key="itemSize" width="197" height="182"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoreCell" id="QKi-j9-stE" customClass="StoreCell" customModule="naverLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gbX-ja-Igb">
+                                            <rect key="frame" x="0.0" y="0.0" width="197" height="182"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25S-K5-hfk">
+                                                    <rect key="frame" x="46" y="60" width="101" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5y-2r-jez">
+                                                    <rect key="frame" x="46" y="118" width="101" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="197" height="182"/>
+                                        <connections>
+                                            <outlet property="foodLabel" destination="Q5y-2r-jez" id="bGc-g1-94a"/>
+                                            <outlet property="nameLabel" destination="25S-K5-hfk" id="oaQ-YU-9go"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YoK-m0-2bd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Zyx-eI-YRP" id="TdN-rl-Fht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLj-Yb-lAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4340" y="737"/>
+            <point key="canvasLocation" x="4339.130434782609" y="736.60714285714278"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="Sl3-ig-4rb">
@@ -840,6 +855,9 @@
         <image name="맛별로2" width="1170" height="178"/>
         <image name="맛있다" width="111" height="134"/>
         <image name="망고플레이트" width="638" height="366"/>
+        <image name="연말배너1" width="1170" height="626"/>
+        <image name="연말배너2" width="1170" height="584"/>
+        <image name="연말배너3" width="1167" height="580"/>
         <image name="우기" width="186" height="126"/>
         <image name="이메일로" width="689" height="132"/>
         <image name="이어돈가" width="498" height="57"/>
