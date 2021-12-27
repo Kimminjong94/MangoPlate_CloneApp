@@ -37,7 +37,7 @@ class PickViewController4: UIViewController, UICollectionViewDataSource, UIColle
 //        StoreCell().nameLabel?.text = data
         self.collectionView.reloadData()
     }
-    
+//MARK: - Get Json Data
     func getStoreData() {
             let url = "http://apis.data.go.kr/3510500/chinese_restaurant/getList?serviceKey=XOCSn1qJ48M00E3tw8OTGkY5WMa6ifqinWOVMJTVOe5yX7nbm%2FazNu1XhooNP3WRWHdhaKz%2Byxg%2Fc8Bk%2B%2BRWeQ%3D%3D&pageNo=1&numOfRows=10&type=JSON"
             
@@ -60,8 +60,6 @@ class PickViewController4: UIViewController, UICollectionViewDataSource, UIColle
                     print("debud resonse\(response)")
 //                    let data = response.response.body.items.item[0].bsn_nm
                     self.didSuccess(response)
-
-
                     
                 case .failure(let error):
                     print("debug get error: \(error.localizedDescription)")
@@ -70,6 +68,7 @@ class PickViewController4: UIViewController, UICollectionViewDataSource, UIColle
 
         }
     
+//MARK: - CollectionView Delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return stores.count
     }
@@ -83,3 +82,8 @@ class PickViewController4: UIViewController, UICollectionViewDataSource, UIColle
 //    }
 }
 }
+
+//MARK: -나의 구분선
+
+
+

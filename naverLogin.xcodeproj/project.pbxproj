@@ -34,7 +34,6 @@
 		589C37F92774222F00077218 /* FoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C37F82774222F00077218 /* FoodResponse.swift */; };
 		589C38202774540000077218 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C381E2774540000077218 /* MainCollectionViewCell.swift */; };
 		589C38212774540000077218 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589C381F2774540000077218 /* MainCollectionViewCell.xib */; };
-		58B9BF082777002B003847C3 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58B9BF072777002B003847C3 /* Store.swift */; };
 		58C65029277364E800D252AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C65028277364E800D252AB /* MainViewController.swift */; };
 		58DC500127757DB600CCD5D5 /* PickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC500027757DB600CCD5D5 /* PickTableViewCell.swift */; };
 		58DC50052775AAC700CCD5D5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC50042775AAC700CCD5D5 /* TabBarController.swift */; };
@@ -71,7 +70,6 @@
 		589C37F82774222F00077218 /* FoodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResponse.swift; sourceTree = "<group>"; };
 		589C381E2774540000077218 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		589C381F2774540000077218 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
-		58B9BF072777002B003847C3 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		58C65028277364E800D252AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		58DC500027757DB600CCD5D5 /* PickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickTableViewCell.swift; sourceTree = "<group>"; };
 		58DC50042775AAC700CCD5D5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -124,10 +122,10 @@
 		588BD1ED27733BBF001E6BA8 /* naverLogin */ = {
 			isa = PBXGroup;
 			children = (
+				588BD1F427733BBF001E6BA8 /* Main.storyboard */,
 				589C38232774573800077218 /* Login */,
 				589C38242774574F00077218 /* FoodRequest */,
 				589C38222774572200077218 /* MainCollectionView */,
-				588BD1F427733BBF001E6BA8 /* Main.storyboard */,
 				5891FA5727749C5C008610A5 /* PickView */,
 				5800987027748C780027432C /* Info */,
 				5896B78227749E1D00E1FF3D /* News */,
@@ -151,7 +149,6 @@
 				5896B77827749CB100E1FF3D /* PickViewController4.swift */,
 				586C6E8127775D820008B9BD /* StoreCell.swift */,
 				586C6E7F277752F50008B9BD /* StoreRequest.swift */,
-				58B9BF072777002B003847C3 /* Store.swift */,
 			);
 			path = PickView;
 			sourceTree = "<group>";
@@ -342,7 +339,6 @@
 				5896B7842774A8A200E1FF3D /* SelfSizeingTableViewCell.swift in Sources */,
 				5896B77927749CB100E1FF3D /* PickViewController4.swift in Sources */,
 				58DC50052775AAC700CCD5D5 /* TabBarController.swift in Sources */,
-				58B9BF082777002B003847C3 /* Store.swift in Sources */,
 				5896B77F27749E1200E1FF3D /* NewsViewController3.swift in Sources */,
 				588BD1F327733BBF001E6BA8 /* LoginViewController.swift in Sources */,
 				5896B7862774C7D400E1FF3D /* SelfSizing2.swift in Sources */,

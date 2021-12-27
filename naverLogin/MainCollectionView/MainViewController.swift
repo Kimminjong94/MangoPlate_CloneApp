@@ -10,20 +10,12 @@ import Alamofire
 
 class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var foods = [FoodRequest]()
+    var foods = [item]()
     var collectionCell = MainCollectionViewCell()
-
-
-    @IBOutlet weak var testLabel: UILabel!
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    
-    var food: [String] = []
-
     
     
     var images: [String] = ["배너1", "배너2", "배너3", "배너4", "배너5", "배너6"]
@@ -53,18 +45,15 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: "cell")
         
-        collectionView.dataSource = self
-        self.collectionView.reloadData()
-        
+        FoodRequest().getFoodData(self)
 
-        
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
     }
-
     private func configureItem() {
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(
@@ -82,31 +71,28 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         ]
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "부산∨", style: .done, target: self, action: nil)
     }
-    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
         pageControl.currentPage = Int(pageNumber)
     }
-    
+    func didSuccess(_ response: FoodResponse) {
+        
+        let data = response.getSafeRestaurantList.item
+        self.foods = data
+        self.collectionView.reloadData()
+    }
 
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return foodImages.count
+        return foods.count
         
     }
-     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MainCollectionViewCell
-        cell.image.image = UIImage(named: foodImages[indexPath.row])
-//        cell.nameLabel.text = 
-        //여기서 didsucces함수를 불러오는게 가능한가?
-
+        
+        cell.nameLabel.text = foods[indexPath.row].biz_nm
         return cell
     }
-    
-
-    
-
     
 }

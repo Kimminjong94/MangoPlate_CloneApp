@@ -9,7 +9,7 @@ import UIKit
 
 class MainCollectionViewCell: UICollectionViewCell {
     
-    var foodData = [FoodRequest]()
+    var foodData = [item]()
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -18,18 +18,8 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        FoodRequest().getFoodData(self)
-
-            
     }
-    
-    func didSuccess(_ response: FoodResponse) {
-        
-        let data = response.getSafeRestaurantList.item[0].biz_nm
-        self.nameLabel.text = data
 
-    }
     
 
 

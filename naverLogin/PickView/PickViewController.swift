@@ -13,7 +13,6 @@ class PickViewController: TabmanViewController {
     
     private var viewControllers: Array<UIViewController> = []
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,9 +46,6 @@ class PickViewController: TabmanViewController {
 
 
     }
-
-
-
 }
 
 extension PickViewController: PageboyViewControllerDataSource, TMBarDataSource {
