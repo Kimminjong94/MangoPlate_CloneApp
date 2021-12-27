@@ -54,6 +54,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         collectionView.register(nibCell, forCellWithReuseIdentifier: "cell")
         
         collectionView.dataSource = self
+        self.collectionView.reloadData()
         
 
         
@@ -98,7 +99,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MainCollectionViewCell
         cell.image.image = UIImage(named: foodImages[indexPath.row])
-        
+//        cell.nameLabel.text = 
         //여기서 didsucces함수를 불러오는게 가능한가?
 
         return cell

@@ -488,42 +488,54 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2ev-C1-5FI">
-                                    <size key="itemSize" width="197" height="182"/>
+                                    <size key="itemSize" width="212" height="247"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoreCell" id="QKi-j9-stE" customClass="StoreCell" customModule="naverLogin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="182"/>
+                                        <rect key="frame" x="101" y="0.0" width="212" height="247"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gbX-ja-Igb">
-                                            <rect key="frame" x="0.0" y="0.0" width="197" height="182"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="212" height="247"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25S-K5-hfk">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25S-K5-hfk">
                                                     <rect key="frame" x="46" y="60" width="101" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5y-2r-jez">
-                                                    <rect key="frame" x="46" y="118" width="101" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5y-2r-jez">
+                                                    <rect key="frame" x="46" y="118" width="41.5" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Q5y-2r-jez" secondAttribute="bottom" constant="100" id="63U-1S-sFZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="25S-K5-hfk" secondAttribute="bottom" constant="158" id="9kM-F9-gA0"/>
+                                                <constraint firstAttribute="trailing" secondItem="Q5y-2r-jez" secondAttribute="trailing" constant="124.5" id="FjL-vb-Pd9"/>
+                                                <constraint firstAttribute="trailing" secondItem="25S-K5-hfk" secondAttribute="trailing" constant="65" id="dZ7-eU-fdf"/>
+                                                <constraint firstItem="Q5y-2r-jez" firstAttribute="top" secondItem="gbX-ja-Igb" secondAttribute="top" constant="118" id="fRh-hm-Cf7"/>
+                                                <constraint firstItem="25S-K5-hfk" firstAttribute="top" secondItem="gbX-ja-Igb" secondAttribute="top" constant="60" id="iI1-Lm-Jtx"/>
+                                                <constraint firstItem="Q5y-2r-jez" firstAttribute="leading" secondItem="gbX-ja-Igb" secondAttribute="leading" constant="46" id="wba-eV-rLr"/>
+                                                <constraint firstItem="25S-K5-hfk" firstAttribute="leading" secondItem="gbX-ja-Igb" secondAttribute="leading" constant="46" id="x8B-NB-xbI"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="197" height="182"/>
+                                        <size key="customSize" width="212" height="247"/>
                                         <connections>
                                             <outlet property="foodLabel" destination="Q5y-2r-jez" id="bGc-g1-94a"/>
                                             <outlet property="nameLabel" destination="25S-K5-hfk" id="oaQ-YU-9go"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="tXZ-7I-R6f" id="ppa-Pd-Hel"/>
+                                    <outlet property="delegate" destination="tXZ-7I-R6f" id="KgO-hW-JOq"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YoK-m0-2bd"/>
