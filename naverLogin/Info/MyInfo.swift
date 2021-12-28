@@ -12,7 +12,11 @@ class MyInfo: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var kakaoProfile: UILabel!
 
+    @IBOutlet weak var email: UILabel!
+    
     var nickname: String?
+    var myemail: String?
+    
     var sectionCell: [[String]] = [["이벤트"], ["구매한 EAT딜","EAT딜 입고알림"],["타임라인", "가고싶다", "마이리스트", "북마크", "내가 등록한 식당"], ["설정"]]
     var myImages = ["인포배너", "인포배너", "인포배너", "인포배너", "인포배너", "인포배너"]
     
@@ -38,9 +42,7 @@ class MyInfo: UIViewController {
                 action: nil
             )
         ]
-
     }
-
 }
 extension MyInfo: UITableViewDelegate, UITableViewDataSource {
     
@@ -65,17 +67,15 @@ extension MyInfo: UITableViewDelegate, UITableViewDataSource {
 extension MyInfo {
     private func setUI() {
         // ✅ 사용자 정보 보여주기
-        if let myname = nickname {
-            kakaoProfile.text = "\(myname)"
-        } else {
-            
+        if let nickname = nickname {
+            self.kakaoProfile.text = "\(nickname)님 환영합니다"
         }
-        // ✅ 닉네임의 경우 필수동의 항목이라서 else 문이 필요하지 않았다.
+//         ✅ 닉네임의 경우 필수동의 항목이라서 else 문이 필요하지 않았다.
 
-//        if let emial = email {
-//            emailText.text = "\(emial)님 환영합니다."
-//        } else {
-//            emailText.text = "이메일 정보 수집을 동의하십시오."
-//        }
+        if let emial = myemail {
+            email.text = "\(emial)님 환영합니다."
+        } else {
+            email.text = "이메일 정보 수집을 동의하십시오."
+        }
     }
 }

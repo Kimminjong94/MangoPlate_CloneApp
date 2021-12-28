@@ -30,17 +30,6 @@
                                             <constraint firstAttribute="height" constant="200" id="pJt-6z-knl"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPH-M2-xeS">
-                                        <rect key="frame" x="70" y="506" width="274" height="59"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="59" id="vgw-wS-Z10"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="카카오톡으로"/>
-                                        <connections>
-                                            <action selector="kakaoLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="94W-wW-9tu"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIE-Vj-tRr">
                                         <rect key="frame" x="70" y="584" width="274" height="53"/>
                                         <constraints>
@@ -52,17 +41,23 @@
                                             <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBL-Dw-DJl"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Zd-Py-I99">
+                                        <rect key="frame" x="70" y="479" width="274" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ffl-Ig-sJc"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.31211742912371132" green="0.31211742912371132" blue="0.31211742912371132" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="BO9-uq-zLC" firstAttribute="top" secondItem="OLQ-hh-g7q" secondAttribute="top" constant="221" id="4tY-wt-el0"/>
-                                    <constraint firstItem="HPH-M2-xeS" firstAttribute="top" secondItem="BO9-uq-zLC" secondAttribute="bottom" constant="85" id="67M-tE-BdR"/>
+                                    <constraint firstItem="4Zd-Py-I99" firstAttribute="top" secondItem="OLQ-hh-g7q" secondAttribute="top" constant="479" id="6EW-qe-One"/>
                                     <constraint firstItem="BO9-uq-zLC" firstAttribute="leading" secondItem="OLQ-hh-g7q" secondAttribute="leading" constant="67" id="8VU-x7-J7P"/>
-                                    <constraint firstItem="HPH-M2-xeS" firstAttribute="leading" secondItem="OLQ-hh-g7q" secondAttribute="leading" constant="70" id="MwY-KK-0Sr"/>
+                                    <constraint firstItem="YIE-Vj-tRr" firstAttribute="top" secondItem="4Zd-Py-I99" secondAttribute="bottom" constant="55" id="AyH-Yu-AGQ"/>
                                     <constraint firstAttribute="trailing" secondItem="YIE-Vj-tRr" secondAttribute="trailing" constant="70" id="Qg2-i4-gfY"/>
-                                    <constraint firstAttribute="trailing" secondItem="HPH-M2-xeS" secondAttribute="trailing" constant="70" id="kwp-X6-ZYH"/>
                                     <constraint firstAttribute="trailing" secondItem="BO9-uq-zLC" secondAttribute="trailing" constant="67" id="nnz-6D-GsE"/>
-                                    <constraint firstItem="YIE-Vj-tRr" firstAttribute="top" secondItem="HPH-M2-xeS" secondAttribute="bottom" constant="19" id="s1e-Kk-Xxo"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Zd-Py-I99" secondAttribute="trailing" constant="70" id="oUX-ur-AqJ"/>
+                                    <constraint firstItem="4Zd-Py-I99" firstAttribute="leading" secondItem="OLQ-hh-g7q" secondAttribute="leading" constant="70" id="pUV-7S-ytD"/>
                                     <constraint firstItem="YIE-Vj-tRr" firstAttribute="leading" secondItem="OLQ-hh-g7q" secondAttribute="leading" constant="70" id="xgG-KE-Z18"/>
                                 </constraints>
                             </view>
@@ -80,6 +75,9 @@
                             <constraint firstItem="OLQ-hh-g7q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="s0q-K6-51H"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginWithKakaoImageView" destination="4Zd-Py-I99" id="ndR-dw-KpB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,9 +288,14 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Button" image="프사수정"/>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgR-WD-CuI">
-                                                <rect key="frame" x="8" y="60" width="72" height="55"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgR-WD-CuI">
+                                                <rect key="frame" x="8" y="35" width="72" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4m-AY-PRW">
+                                                <rect key="frame" x="8" y="98" width="163" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -302,11 +305,17 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YbK-Xs-XHs" secondAttribute="trailing" id="HDd-ZX-0ey"/>
                                             <constraint firstAttribute="bottom" secondItem="qmq-c2-GAa" secondAttribute="bottom" constant="173" id="Jkk-P9-9uJ"/>
+                                            <constraint firstItem="rgR-WD-CuI" firstAttribute="top" secondItem="5uo-WP-lAh" secondAttribute="top" constant="35" id="Lkm-WL-rBJ"/>
+                                            <constraint firstItem="t4m-AY-PRW" firstAttribute="top" secondItem="5uo-WP-lAh" secondAttribute="top" constant="98" id="Rad-na-FyS"/>
                                             <constraint firstItem="qmq-c2-GAa" firstAttribute="top" secondItem="5uo-WP-lAh" secondAttribute="top" constant="142" id="TTr-6O-RZL"/>
                                             <constraint firstAttribute="trailing" secondItem="qmq-c2-GAa" secondAttribute="trailing" id="Txn-CH-7rn"/>
                                             <constraint firstItem="YbK-Xs-XHs" firstAttribute="top" secondItem="5uo-WP-lAh" secondAttribute="top" constant="50" id="cAe-Ca-0wh"/>
+                                            <constraint firstItem="t4m-AY-PRW" firstAttribute="leading" secondItem="5uo-WP-lAh" secondAttribute="leading" constant="8" id="jdP-Tq-liQ"/>
                                             <constraint firstItem="YbK-Xs-XHs" firstAttribute="leading" secondItem="5uo-WP-lAh" secondAttribute="leading" constant="310" id="oQ7-2g-qLq"/>
                                             <constraint firstItem="qmq-c2-GAa" firstAttribute="leading" secondItem="5uo-WP-lAh" secondAttribute="leading" id="q1X-EH-Fx2"/>
+                                            <constraint firstItem="rgR-WD-CuI" firstAttribute="leading" secondItem="5uo-WP-lAh" secondAttribute="leading" constant="8" id="t7F-eR-HV3"/>
+                                            <constraint firstAttribute="trailing" secondItem="t4m-AY-PRW" secondAttribute="trailing" constant="243" id="uax-Hn-I4a"/>
+                                            <constraint firstAttribute="trailing" secondItem="rgR-WD-CuI" secondAttribute="trailing" constant="334" id="zOl-5h-E5B"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -331,6 +340,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3aw-Gx-Peq"/>
                     <connections>
+                        <outlet property="email" destination="t4m-AY-PRW" id="43X-Q5-sMt"/>
                         <outlet property="kakaoProfile" destination="rgR-WD-CuI" id="nHb-Q6-OLE"/>
                         <outlet property="tableView" destination="qmq-c2-GAa" id="qti-ie-lv6"/>
                     </connections>
@@ -870,7 +880,6 @@
         <image name="점3개" width="72" height="34"/>
         <image name="좋아요" width="176" height="58"/>
         <image name="친구최근소식" width="837" height="187"/>
-        <image name="카카오톡으로" width="684" height="146"/>
         <image name="쿠폰1" width="1170" height="1069"/>
         <image name="탭바222" width="31" height="43"/>
         <image name="탭바333" width="38" height="41"/>
