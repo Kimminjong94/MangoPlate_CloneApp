@@ -10,13 +10,15 @@ import UIKit
 class MyInfo: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var kakaoProfile: UILabel!
+
+    var nickname: String?
     var sectionCell: [[String]] = [["이벤트"], ["구매한 EAT딜","EAT딜 입고알림"],["타임라인", "가고싶다", "마이리스트", "북마크", "내가 등록한 식당"], ["설정"]]
-    
     var myImages = ["인포배너", "인포배너", "인포배너", "인포배너", "인포배너", "인포배너"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
         
         navigationController?.navigationBar.tintColor = .label
         configureItem()
@@ -58,5 +60,22 @@ extension MyInfo: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sectionCell[section].count
+    }
+}
+extension MyInfo {
+    private func setUI() {
+        // ✅ 사용자 정보 보여주기
+        if let myname = nickname {
+            kakaoProfile.text = "\(myname)"
+        } else {
+            
+        }
+        // ✅ 닉네임의 경우 필수동의 항목이라서 else 문이 필요하지 않았다.
+
+//        if let emial = email {
+//            emailText.text = "\(emial)님 환영합니다."
+//        } else {
+//            emailText.text = "이메일 정보 수집을 동의하십시오."
+//        }
     }
 }

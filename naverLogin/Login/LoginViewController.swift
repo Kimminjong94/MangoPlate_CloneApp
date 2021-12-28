@@ -16,10 +16,12 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var id: UILabel!
     
+    
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
     override func viewDidLoad() {
         loginInstance?.delegate = self
+        
     }
     
     // 로그인에 성공한 경우 호출
@@ -62,6 +64,8 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
                 }
                 else {
                     print("loginWithKakaoAccount() success.")
+                    self.getUserInfo()
+
                     guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
                     navigation.modalPresentationStyle = .overFullScreen
                     self.present(navigation, animated: true, completion: nil)
@@ -108,8 +112,38 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
         self.id.text = "\(id)"
       }
     }
-    
+}
 
-    
+extension LoginViewController {
+
+// ✅ 사용자 정보를 성공적으로 가져오면 화면전환 한다.
+    private func getUserInfo() {
+
+        // ✅ 사용자 정보 가져오기
+        UserApi.shared.me() {(user, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("me() success.")
+
+                // ✅ 닉네임, 이메일 정보
+                let nickname = user?.kakaoAccount?.profile?.nickname
+                let email = user?.kakaoAccount?.email
+
+                guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MyInfo") as? MyInfo else { return }
+
+                // ✅ 사용자 정보 넘기기
+                print("\(nickname)")
+                nextVC.nickname = nickname
+//                nextVC.email = email
+
+                // ✅ 화면전환
+                self.navigationController?.pushViewController(nextVC, animated: true)
+
+                
+            }
+        }
+    }
 }
 
