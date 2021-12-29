@@ -14,7 +14,7 @@ class MyInfo: UIViewController {
 
     @IBOutlet weak var email: UILabel!
     
-    var nickname: String?
+    var kakaoNickname: String?
     var myemail: String?
     
     var sectionCell: [[String]] = [["이벤트"], ["구매한 EAT딜","EAT딜 입고알림"],["타임라인", "가고싶다", "마이리스트", "북마크", "내가 등록한 식당"], ["설정"]]
@@ -66,16 +66,13 @@ extension MyInfo: UITableViewDelegate, UITableViewDataSource {
 }
 extension MyInfo {
     private func setUI() {
-        // ✅ 사용자 정보 보여주기
-        if let nickname = nickname {
-            self.kakaoProfile.text = "\(nickname)님 환영합니다"
+        if let nickname = kakaoNickname {
+            self.kakaoProfile.text = "\(nickname)"
         }
-//         ✅ 닉네임의 경우 필수동의 항목이라서 else 문이 필요하지 않았다.
-
         if let emial = myemail {
             email.text = "\(emial)님 환영합니다."
         } else {
-            email.text = "이메일 정보 수집을 동의하십시오."
+            email.text = "이메일 정보 없음"
         }
     }
 }
