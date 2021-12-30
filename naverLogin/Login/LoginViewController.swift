@@ -22,7 +22,6 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
     
     
     
-    let myProfileName = "홍길동"
     
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
@@ -98,27 +97,27 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
         super.viewDidAppear(animated)
 
         // ✅ 유효한 토큰 검사
-        if (AuthApi.hasToken()) {
-            UserApi.shared.accessTokenInfo { (_, error) in
-                if let error = error {
-                    if let sdkError = error as? SdkError, sdkError.isInvalidTokenError() == true  {
-                        //로그인 필요
-                    }
-                    else {
-                        //기타 에러
-                    }
-                }
-                else {
-                    //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
-
-                    // ✅ 사용자 정보를 가져오고 화면전환을 하는 커스텀 메서드
-                    self.getUserInfo()
-                }
-            }
-        }
-        else {
-            //로그인 필요
-        }
+//        if (AuthApi.hasToken()) {
+//            UserApi.shared.accessTokenInfo { (_, error) in
+//                if let error = error {
+//                    if let sdkError = error as? SdkError, sdkError.isInvalidTokenError() == true  {
+//                        //로그인 필요
+//                    }
+//                    else {
+//                        //기타 에러
+//                    }
+//                }
+//                else {
+//                    //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
+//
+//                    // ✅ 사용자 정보를 가져오고 화면전환을 하는 커스텀 메서드
+//                    self.getUserInfo()
+//                }
+//            }
+//        }
+//        else {
+//            //로그인 필요
+//        }
     }
 }
 //MARK: - 카카오로그인
@@ -227,13 +226,28 @@ extension LoginViewController {
             }
             else {
                 print("loginWithKakaoAccount() success.")
+                self.getUserInfo()
+
+                guard let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else{
+                    return
+                }
+                self.changeRootViewController(mainTabBarController)
                 
                 // ✅ 회원가입 성공 시 oauthToken 저장
                  _ = oauthToken
                 
                 // ✅ 사용자정보를 성공적으로 가져오면 화면전환 한다.
-                self.getUserInfo()
             }
+        }
+    }
+    
+    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = viewControllerToPresent
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
+        } else {
+            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+            self.present(viewControllerToPresent, animated: true, completion: nil)
         }
     }
 }

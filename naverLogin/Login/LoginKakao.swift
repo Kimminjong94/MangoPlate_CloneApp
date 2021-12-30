@@ -12,6 +12,8 @@ import KakaoSDKCommon
 
 class LoginKakao: UIViewController {
     
+    var mynickName: String = "김민종"
+    
     @IBOutlet weak var kakaoAccountImage: UIImageView!
     
     override func viewDidLoad() {
@@ -39,7 +41,7 @@ class LoginKakao: UIViewController {
                     // ✅ 사용자 정보를 가져오고 화면전환을 하는 커스텀 메서드
                     self.getUserInfo()
 //                    guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "KakaoTabBar") as? KakaoTabBar else { return }
-//                    navigation.modalPresentationStyle = .overFullScreen
+//                    navigation.modalPresentationStyle = .fullScreen
 //                    self.present(navigation, animated: true, completion: nil)
                 }
             }
@@ -88,14 +90,16 @@ extension LoginKakao {
                 let kakaoTab = KakaoTabBar()
                 
                 // ✅ 사용자 정보 넘기기
-                nextVC.nickname = nickname
+                nextVC.nickname = self.mynickName
 //                nextVC.email = email
 //                self.navigationController?.pushViewController(nextVC, animated: true)
                 
-                kakaoTab.modalPresentationStyle = .overFullScreen
-                self.present(kakaoTab, animated: true)
-
+//                kakaoTab.modalPresentationStyle = .overFullScreen
+//                self.present(kakaoTab, animated: true)
                 
+                guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "KakaoTabBar") as? KakaoTabBar else { return }
+                navigation.modalPresentationStyle = .fullScreen
+                self.present(navigation, animated: true, completion: nil)
             }
         }
     }
