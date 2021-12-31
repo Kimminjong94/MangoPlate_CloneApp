@@ -14,6 +14,8 @@ class MyInfo: UIViewController {
 
     @IBOutlet weak var email: UILabel!
     
+    //화면전환시 값이 잘 넘어오는가 ?
+    
     var kakaoNickname: String?
     var myemail: String?
     
@@ -31,8 +33,16 @@ class MyInfo: UIViewController {
         tableView.register(UINib(nibName: "InfoSection", bundle: nil), forCellReuseIdentifier: "InfoSection")
         tableView.dataSource = self
         tableView.delegate = self
+        
 
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if let value = UDM.shared.defaults.value(forKey: "Key") as? String {
+            kakaoProfile.text = value
+        }
+
+    }
+    
     private func configureItem() {
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(
@@ -69,10 +79,10 @@ extension MyInfo {
         if let nickname = kakaoNickname {
             self.kakaoProfile.text = "\(nickname)"
         }
-        if let emial = myemail {
-            email.text = "\(emial)님 환영합니다."
-        } else {
-            email.text = "이메일 정보 없음"
-        }
+//        if let emial = myemail {
+//            email.text = "\(emial)님 환영합니다."
+//        } else {
+//            email.text = "이메일 정보 없음"
+//        }
     }
 }

@@ -21,8 +21,6 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
     @IBOutlet weak var loginWithKakaoImageView: UIImageView!
     
     
-    
-    
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
     override func viewDidLoad() {
@@ -97,28 +95,34 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
         super.viewDidAppear(animated)
 
         // ✅ 유효한 토큰 검사
-//        if (AuthApi.hasToken()) {
-//            UserApi.shared.accessTokenInfo { (_, error) in
-//                if let error = error {
-//                    if let sdkError = error as? SdkError, sdkError.isInvalidTokenError() == true  {
-//                        //로그인 필요
-//                    }
-//                    else {
-//                        //기타 에러
-//                    }
-//                }
-//                else {
-//                    //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
-//
-//                    // ✅ 사용자 정보를 가져오고 화면전환을 하는 커스텀 메서드
-//                    self.getUserInfo()
-//                }
-//            }
-//        }
-//        else {
-//            //로그인 필요
-//        }
+        if (AuthApi.hasToken()) {
+            UserApi.shared.accessTokenInfo { (_, error) in
+                if let error = error {
+                    if let sdkError = error as? SdkError, sdkError.isInvalidTokenError() == true  {
+                        //로그인 필요
+                    }
+                    else {
+                        //기타 에러
+                    }
+                }
+                else {
+                    //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
+
+                    // ✅ 사용자 정보를 가져오고 화면전환을 하는 커스텀 메서드
+                    self.getUserInfo()
+
+                }
+            }
+        }
+        else {
+            //로그인 필요
+        }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+
+    }
+    
 }
 //MARK: - 카카오로그인
 
@@ -169,14 +173,22 @@ extension LoginViewController {
                 // ✅ 사용자 정보 넘기기
                 
 //                nextVC.nickname = nickname
-                nextVC.kakaoNickname = nickname
-                nextVC.myemail = email
+//                nextVC.kakaoNickname = nickname
+//                nextVC.myemail = email
+                UDM.shared.defaults.setValue(nickname, forKey: "Key")
+//                self.myname = nickname
+//                self.navigationController?.pushViewController(nextVC, animated: true)
+                //마이페이지에 프로퍼티
+                //viewdidload로 하기때문에 유저디폴트로 처리
+                //마이인포 뷰디드로드 초기화 하고 내정보 클릭시 뷰디드로드에서
+                //어떤식으로 실행되는지 뷰디드로드부터 시작
+                //템플릿숙지
+                // 마저 해결 해보기 , 템플릿 활용으로 넘어가기, 템플릿숙지 코드녹여보기
+                //
                 
-                self.navigationController?.pushViewController(nextVC, animated: true)
-                
-//                guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
-//                navigation.modalPresentationStyle = .overFullScreen
-//                self.present(navigation, animated: true, completion: nil)
+                guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
+                navigation.modalPresentationStyle = .overFullScreen
+                self.present(navigation, animated: true, completion: nil)
             }
         }
     }
@@ -250,5 +262,12 @@ extension LoginViewController {
             self.present(viewControllerToPresent, animated: true, completion: nil)
         }
     }
+}
+
+class UDM {
+    static let shared = UDM()
+    
+    let defaults = UserDefaults(suiteName: "com.test.saved.data")!
+
 }
 

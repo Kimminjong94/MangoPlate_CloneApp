@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9JF-Bx-fU8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UhX-1H-CZp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -167,14 +167,52 @@
                     <view key="view" contentMode="scaleToFill" id="gUk-dH-cdy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ws-LX-8wY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Az7-Ip-pNN">
+                                        <rect key="frame" x="73" y="421" width="256" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="플러스버튼1"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgY-hP-16g">
+                                        <rect key="frame" x="79" y="576" width="144" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="플러스버튼3"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yot-Oe-e3h">
+                                        <rect key="frame" x="79" y="659" width="165" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="플러스버튼4"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZT-gP-Jbi">
+                                        <rect key="frame" x="79" y="500" width="144" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="플러스버튼2"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87058818339999999" green="0.49803921579999999" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LWx-5s-5eR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ws-LX-8wY" firstAttribute="leading" secondItem="LWx-5s-5eR" secondAttribute="leading" id="5nE-Vp-d8q"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ws-LX-8wY" secondAttribute="bottom" id="eAY-dg-ypG"/>
+                            <constraint firstItem="2Ws-LX-8wY" firstAttribute="trailing" secondItem="LWx-5s-5eR" secondAttribute="trailing" id="lk7-j4-qnI"/>
+                            <constraint firstItem="2Ws-LX-8wY" firstAttribute="top" secondItem="gUk-dH-cdy" secondAttribute="top" id="vGC-Zy-SeA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="탭바333" id="jbE-gG-aJA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZS-IC-hNL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4039.130434782609" y="747.99107142857144"/>
+            <point key="canvasLocation" x="3002.898550724638" y="857.8125"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hh2-c4-phi">
@@ -367,13 +405,7 @@
                                                 <state key="normal" title="Button" image="프사수정"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgR-WD-CuI">
-                                                <rect key="frame" x="8" y="35" width="86" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4m-AY-PRW">
-                                                <rect key="frame" x="8" y="98" width="163" height="20.5"/>
+                                                <rect key="frame" x="8" y="35" width="86" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -384,15 +416,12 @@
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YbK-Xs-XHs" secondAttribute="trailing" id="HDd-ZX-0ey"/>
                                             <constraint firstAttribute="bottom" secondItem="qmq-c2-GAa" secondAttribute="bottom" constant="173" id="Jkk-P9-9uJ"/>
                                             <constraint firstItem="rgR-WD-CuI" firstAttribute="top" secondItem="5uo-WP-lAh" secondAttribute="top" constant="35" id="Lkm-WL-rBJ"/>
-                                            <constraint firstItem="t4m-AY-PRW" firstAttribute="top" secondItem="5uo-WP-lAh" secondAttribute="top" constant="98" id="Rad-na-FyS"/>
                                             <constraint firstItem="qmq-c2-GAa" firstAttribute="top" secondItem="5uo-WP-lAh" secondAttribute="top" constant="142" id="TTr-6O-RZL"/>
                                             <constraint firstAttribute="trailing" secondItem="qmq-c2-GAa" secondAttribute="trailing" id="Txn-CH-7rn"/>
                                             <constraint firstItem="YbK-Xs-XHs" firstAttribute="top" secondItem="5uo-WP-lAh" secondAttribute="top" constant="50" id="cAe-Ca-0wh"/>
-                                            <constraint firstItem="t4m-AY-PRW" firstAttribute="leading" secondItem="5uo-WP-lAh" secondAttribute="leading" constant="8" id="jdP-Tq-liQ"/>
                                             <constraint firstItem="YbK-Xs-XHs" firstAttribute="leading" secondItem="5uo-WP-lAh" secondAttribute="leading" constant="310" id="oQ7-2g-qLq"/>
                                             <constraint firstItem="qmq-c2-GAa" firstAttribute="leading" secondItem="5uo-WP-lAh" secondAttribute="leading" id="q1X-EH-Fx2"/>
                                             <constraint firstItem="rgR-WD-CuI" firstAttribute="leading" secondItem="5uo-WP-lAh" secondAttribute="leading" constant="8" id="t7F-eR-HV3"/>
-                                            <constraint firstAttribute="trailing" secondItem="t4m-AY-PRW" secondAttribute="trailing" constant="243" id="uax-Hn-I4a"/>
                                             <constraint firstAttribute="trailing" secondItem="rgR-WD-CuI" secondAttribute="trailing" constant="320" id="zOl-5h-E5B"/>
                                         </constraints>
                                     </view>
@@ -418,7 +447,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="3aw-Gx-Peq"/>
                     <connections>
-                        <outlet property="email" destination="t4m-AY-PRW" id="43X-Q5-sMt"/>
                         <outlet property="kakaoProfile" destination="rgR-WD-CuI" id="nHb-Q6-OLE"/>
                         <outlet property="tableView" destination="qmq-c2-GAa" id="qti-ie-lv6"/>
                     </connections>
@@ -1043,6 +1071,10 @@
         <image name="팔로워" width="338" height="113"/>
         <image name="평점순" width="153" height="43"/>
         <image name="프사수정" width="233" height="118"/>
+        <image name="플러스버튼1" width="746" height="92"/>
+        <image name="플러스버튼2" width="413" height="106"/>
+        <image name="플러스버튼3" width="426" height="91"/>
+        <image name="플러스버튼4" width="550" height="82"/>
         <image name="필터버튼" width="185" height="96"/>
         <image name="홀릭배너" width="1170" height="200"/>
         <systemColor name="systemBackgroundColor">
