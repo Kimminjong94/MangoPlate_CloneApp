@@ -35,7 +35,4 @@ class PickViewController2: UIViewController,UITableViewDelegate, UITableViewData
         
         return cell
     }
-        
-
-
 }

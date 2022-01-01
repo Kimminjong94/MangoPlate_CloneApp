@@ -12,9 +12,9 @@
 		5800986B27748AAB0027432C /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986A27748AAB0027432C /* SectionCell.swift */; };
 		5800986E27748AE30027432C /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986C27748AE30027432C /* InfoSection.swift */; };
 		5800986F27748AE30027432C /* InfoSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5800986D27748AE30027432C /* InfoSection.xib */; };
-		586B2923277C20D100AF5A30 /* LoginKakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586B2922277C20D100AF5A30 /* LoginKakao.swift */; };
-		586B2925277C20E200AF5A30 /* LogOutKakao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586B2924277C20E200AF5A30 /* LogOutKakao.swift */; };
-		586B2927277C4FD900AF5A30 /* KakaoTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586B2926277C4FD900AF5A30 /* KakaoTabBar.swift */; };
+		58392B632780312200A2E487 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B622780312200A2E487 /* Constant.swift */; };
+		58392B66278031E100A2E487 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B65278031E100A2E487 /* BaseViewController.swift */; };
+		58392B6A2780359700A2E487 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B692780359700A2E487 /* PlusViewController.swift */; };
 		586C6E80277752F50008B9BD /* StoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C6E7F277752F50008B9BD /* StoreRequest.swift */; };
 		586C6E8227775D820008B9BD /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C6E8127775D820008B9BD /* StoreCell.swift */; };
 		588BD1EF27733BBF001E6BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1EE27733BBF001E6BA8 /* AppDelegate.swift */; };
@@ -49,9 +49,9 @@
 		5800986A27748AAB0027432C /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
 		5800986C27748AE30027432C /* InfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSection.swift; sourceTree = "<group>"; };
 		5800986D27748AE30027432C /* InfoSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoSection.xib; sourceTree = "<group>"; };
-		586B2922277C20D100AF5A30 /* LoginKakao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginKakao.swift; sourceTree = "<group>"; };
-		586B2924277C20E200AF5A30 /* LogOutKakao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutKakao.swift; sourceTree = "<group>"; };
-		586B2926277C4FD900AF5A30 /* KakaoTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoTabBar.swift; sourceTree = "<group>"; };
+		58392B622780312200A2E487 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		58392B65278031E100A2E487 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		58392B692780359700A2E487 /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
 		586C6E7F277752F50008B9BD /* StoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRequest.swift; sourceTree = "<group>"; };
 		586C6E8127775D820008B9BD /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
 		588BD1EB27733BBF001E6BA8 /* naverLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naverLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +107,31 @@
 			path = Info;
 			sourceTree = "<group>";
 		};
+		58392B612780310100A2E487 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				58392B622780312200A2E487 /* Constant.swift */,
+				58392B64278031D200A2E487 /* Base */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		58392B64278031D200A2E487 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				58392B65278031E100A2E487 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		58392B682780357200A2E487 /* Plus */ = {
+			isa = PBXGroup;
+			children = (
+				58392B692780359700A2E487 /* PlusViewController.swift */,
+			);
+			path = Plus;
+			sourceTree = "<group>";
+		};
 		588BD1E227733BBE001E6BA8 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +153,7 @@
 		588BD1ED27733BBF001E6BA8 /* naverLogin */ = {
 			isa = PBXGroup;
 			children = (
+				58392B612780310100A2E487 /* Configuration */,
 				588BD1F427733BBF001E6BA8 /* Main.storyboard */,
 				589C38232774573800077218 /* Login */,
 				589C38242774574F00077218 /* FoodRequest */,
@@ -135,6 +161,7 @@
 				5891FA5727749C5C008610A5 /* PickView */,
 				5800987027748C780027432C /* Info */,
 				5896B78227749E1D00E1FF3D /* News */,
+				58392B682780357200A2E487 /* Plus */,
 				588BD1F727733BBF001E6BA8 /* Assets.xcassets */,
 				588BD1F927733BBF001E6BA8 /* LaunchScreen.storyboard */,
 				588BD1FC27733BBF001E6BA8 /* Info.plist */,
@@ -186,9 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				588BD1F227733BBF001E6BA8 /* LoginViewController.swift */,
-				586B2924277C20E200AF5A30 /* LogOutKakao.swift */,
-				586B2922277C20D100AF5A30 /* LoginKakao.swift */,
-				586B2926277C4FD900AF5A30 /* KakaoTabBar.swift */,
 				58DC50042775AAC700CCD5D5 /* TabBarController.swift */,
 			);
 			path = Login;
@@ -342,13 +366,16 @@
 				5800986E27748AE30027432C /* InfoSection.swift in Sources */,
 				5800986927747AB50027432C /* MyInfo.swift in Sources */,
 				58DC50072776004100CCD5D5 /* PickCollectionViewCell.swift in Sources */,
+				58392B66278031E100A2E487 /* BaseViewController.swift in Sources */,
 				5891FA5627749838008610A5 /* PickViewController3.swift in Sources */,
 				589C37F92774222F00077218 /* FoodResponse.swift in Sources */,
 				5800986B27748AAB0027432C /* SectionCell.swift in Sources */,
 				5896B7842774A8A200E1FF3D /* SelfSizeingTableViewCell.swift in Sources */,
+				58392B632780312200A2E487 /* Constant.swift in Sources */,
 				5896B77927749CB100E1FF3D /* PickViewController4.swift in Sources */,
 				58DC50052775AAC700CCD5D5 /* TabBarController.swift in Sources */,
 				5896B77F27749E1200E1FF3D /* NewsViewController3.swift in Sources */,
+				58392B6A2780359700A2E487 /* PlusViewController.swift in Sources */,
 				588BD1F327733BBF001E6BA8 /* LoginViewController.swift in Sources */,
 				5896B7862774C7D400E1FF3D /* SelfSizing2.swift in Sources */,
 				589C38202774540000077218 /* MainCollectionViewCell.swift in Sources */,
@@ -356,15 +383,12 @@
 				588BD1EF27733BBF001E6BA8 /* AppDelegate.swift in Sources */,
 				5891FA522774981A008610A5 /* PickViewController.swift in Sources */,
 				58DC500127757DB600CCD5D5 /* PickTableViewCell.swift in Sources */,
-				586B2925277C20E200AF5A30 /* LogOutKakao.swift in Sources */,
 				5891FA542774982E008610A5 /* PickViewController2.swift in Sources */,
 				5896B77D27749E0A00E1FF3D /* NewsViewController2.swift in Sources */,
-				586B2923277C20D100AF5A30 /* LoginKakao.swift in Sources */,
 				588BD1F127733BBF001E6BA8 /* SceneDelegate.swift in Sources */,
 				586C6E8227775D820008B9BD /* StoreCell.swift in Sources */,
 				58C65029277364E800D252AB /* MainViewController.swift in Sources */,
 				5896B77B27749DF300E1FF3D /* NewsViewController.swift in Sources */,
-				586B2927277C4FD900AF5A30 /* KakaoTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -161,30 +161,16 @@ extension LoginViewController {
                 
                 // ✅ 사용자정보를 성공적으로 가져오면 화면전환 한다.
                 let nickname = user?.kakaoAccount?.profile?.nickname
-                let email = user?.kakaoAccount?.email
                 
                 guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MyInfo") as? MyInfo else { return }
                 
-                let myVC = TabBarController()
                 
                 
                 
-                print("\(nickname)")
-                // ✅ 사용자 정보 넘기기
                 
-//                nextVC.nickname = nickname
-//                nextVC.kakaoNickname = nickname
-//                nextVC.myemail = email
+
                 UDM.shared.defaults.setValue(nickname, forKey: "Key")
-//                self.myname = nickname
-//                self.navigationController?.pushViewController(nextVC, animated: true)
-                //마이페이지에 프로퍼티
-                //viewdidload로 하기때문에 유저디폴트로 처리
-                //마이인포 뷰디드로드 초기화 하고 내정보 클릭시 뷰디드로드에서
-                //어떤식으로 실행되는지 뷰디드로드부터 시작
-                //템플릿숙지
-                // 마저 해결 해보기 , 템플릿 활용으로 넘어가기, 템플릿숙지 코드녹여보기
-                //
+
                 
                 guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
                 navigation.modalPresentationStyle = .overFullScreen
