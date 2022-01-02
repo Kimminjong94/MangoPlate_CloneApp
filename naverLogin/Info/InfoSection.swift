@@ -10,12 +10,10 @@ import UIKit
 class InfoSection: UITableViewCell {
     
     @IBOutlet weak var sectionImageview: UIImageView!
-    
     @IBOutlet weak var sectionLabelView: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
 

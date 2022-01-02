@@ -11,20 +11,15 @@ class MyInfo: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var kakaoProfile: UILabel!
-
-    @IBOutlet weak var email: UILabel!
-    
-    //화면전환시 값이 잘 넘어오는가 ?
     
     var kakaoNickname: String?
-    var myemail: String?
     
     var sectionCell: [[String]] = [["이벤트"], ["구매한 EAT딜","EAT딜 입고알림"],["타임라인", "가고싶다", "마이리스트", "북마크", "내가 등록한 식당"], ["설정"]]
     var myImages = ["인포배너", "인포배너", "인포배너", "인포배너", "인포배너", "인포배너"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+//        setUI()
         
         navigationController?.navigationBar.tintColor = .label
         configureItem()
@@ -74,15 +69,15 @@ extension MyInfo: UITableViewDelegate, UITableViewDataSource {
         return sectionCell[section].count
     }
 }
-extension MyInfo {
-    private func setUI() {
-        if let nickname = kakaoNickname {
-            self.kakaoProfile.text = "\(nickname)"
-        }
+//extension MyInfo {
+//    private func setUI() {
+//        if let nickname = kakaoNickname {
+//            self.kakaoProfile.text = "\(nickname)"
+//        }
 //        if let emial = myemail {
 //            email.text = "\(emial)님 환영합니다."
 //        } else {
 //            email.text = "이메일 정보 없음"
 //        }
-    }
-}
+//    }
+//}

@@ -42,9 +42,6 @@ class PickViewController: TabmanViewController {
         bar.indicator.overscrollBehavior = .compress
         bar.indicator.overscrollBehavior = .bounce
 
-
-
-
     }
 }
 
@@ -53,9 +50,6 @@ extension PickViewController: PageboyViewControllerDataSource, TMBarDataSource {
         let item = TMBarItem(title: "")
         item.title = "EAT딜 \(index)"
         item.image = UIImage(named: "image.png")
-
-        // ↑↑ 이미지는 이따가 탭바 형식으로 보여줄 때 사용할 것이니 "이미지가 왜 있지?" 하지말고 넘어가주세요.
-        
         return item
     }
     

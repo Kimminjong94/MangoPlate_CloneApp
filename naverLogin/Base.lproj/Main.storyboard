@@ -147,10 +147,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJP-GS-iL9">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXB-23-ZuD">
-                                        <rect key="frame" x="0.0" y="0.0" width="422" height="717"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="422" height="1300"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzi-DT-e8d">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
@@ -222,13 +222,13 @@
                                         <constraints>
                                             <constraint firstItem="Mqt-YH-0Qd" firstAttribute="leading" secondItem="TXB-23-ZuD" secondAttribute="leading" id="0G3-KG-bhn"/>
                                             <constraint firstAttribute="trailing" secondItem="a31-TD-wOs" secondAttribute="trailing" constant="330" id="1L5-cr-HJD"/>
-                                            <constraint firstAttribute="height" constant="717" id="D9Z-Eq-1kX"/>
+                                            <constraint firstAttribute="height" constant="1300" id="D9Z-Eq-1kX"/>
                                             <constraint firstAttribute="trailing" secondItem="Upv-WF-gcs" secondAttribute="trailing" id="HNH-GE-NVS"/>
                                             <constraint firstItem="a31-TD-wOs" firstAttribute="leading" secondItem="TXB-23-ZuD" secondAttribute="leading" constant="15" id="KfH-K0-I3y"/>
                                             <constraint firstItem="Yzi-DT-e8d" firstAttribute="top" secondItem="TXB-23-ZuD" secondAttribute="top" id="LMl-Zz-qXz"/>
                                             <constraint firstItem="Upv-WF-gcs" firstAttribute="top" secondItem="oTj-sB-Ptz" secondAttribute="bottom" constant="5" id="N9l-xs-kmc"/>
                                             <constraint firstItem="oTj-sB-Ptz" firstAttribute="top" secondItem="Yzi-DT-e8d" secondAttribute="bottom" constant="8" symbolic="YES" id="Qfn-7K-72D"/>
-                                            <constraint firstAttribute="bottom" secondItem="Mqt-YH-0Qd" secondAttribute="bottom" id="RUg-6V-FXe"/>
+                                            <constraint firstAttribute="bottom" secondItem="Mqt-YH-0Qd" secondAttribute="bottom" constant="583" id="RUg-6V-FXe"/>
                                             <constraint firstItem="0bL-k6-3eZ" firstAttribute="leading" secondItem="oTj-sB-Ptz" secondAttribute="trailing" constant="5" id="U9y-U3-kls"/>
                                             <constraint firstItem="0bL-k6-3eZ" firstAttribute="top" secondItem="Yzi-DT-e8d" secondAttribute="bottom" constant="8" symbolic="YES" id="WJl-Oh-xTh"/>
                                             <constraint firstAttribute="trailing" secondItem="0bL-k6-3eZ" secondAttribute="trailing" constant="16" id="WTv-ST-m8E"/>
@@ -246,8 +246,8 @@
                                 <constraints>
                                     <constraint firstItem="TXB-23-ZuD" firstAttribute="leading" secondItem="rJP-GS-iL9" secondAttribute="leading" id="3Ge-3g-9lw"/>
                                     <constraint firstItem="TXB-23-ZuD" firstAttribute="top" secondItem="rJP-GS-iL9" secondAttribute="top" id="7Ve-g1-8n8"/>
-                                    <constraint firstAttribute="trailing" secondItem="TXB-23-ZuD" secondAttribute="trailing" id="TmL-hH-DVD"/>
-                                    <constraint firstAttribute="bottom" secondItem="TXB-23-ZuD" secondAttribute="bottom" id="Xen-Ph-mLq"/>
+                                    <constraint firstAttribute="trailing" secondItem="TXB-23-ZuD" secondAttribute="trailing" constant="-8" id="TmL-hH-DVD"/>
+                                    <constraint firstAttribute="bottom" secondItem="TXB-23-ZuD" secondAttribute="bottom" constant="-575" id="Xen-Ph-mLq"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -255,7 +255,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TXB-23-ZuD" firstAttribute="width" secondItem="Bza-7g-p6f" secondAttribute="width" multiplier="1.01932" id="BUt-Tm-aSB"/>
-                            <constraint firstAttribute="bottom" secondItem="rJP-GS-iL9" secondAttribute="bottom" id="VnY-v5-pxC"/>
+                            <constraint firstAttribute="bottom" secondItem="rJP-GS-iL9" secondAttribute="bottom" constant="83" id="VnY-v5-pxC"/>
                             <constraint firstItem="rJP-GS-iL9" firstAttribute="leading" secondItem="MTq-K1-dR3" secondAttribute="leading" id="acp-8z-yhG"/>
                             <constraint firstItem="rJP-GS-iL9" firstAttribute="top" secondItem="MTq-K1-dR3" secondAttribute="top" id="icY-bS-FoG"/>
                             <constraint firstItem="rJP-GS-iL9" firstAttribute="trailing" secondItem="MTq-K1-dR3" secondAttribute="trailing" id="zrg-Zv-Lls"/>
@@ -272,10 +272,10 @@
             </objects>
             <point key="canvasLocation" x="4040.579710144928" y="27.455357142857142"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar View Controller-->
         <scene sceneID="hiU-uI-drV">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qoj-dL-1X1" customClass="TabBarController" customModule="naverLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="BaseTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qoj-dL-1X1" customClass="BaseTabBarViewController" customModule="naverLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="db1-7k-6yl"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sNk-wi-oDB">
@@ -383,7 +383,7 @@
         <scene sceneID="iaV-TK-17N">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XQW-b9-sNZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="탭바최종" id="d9Q-p5-9Kb"/>
+                    <tabBarItem key="tabBarItem" title="" id="d9Q-p5-9Kb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dR7-1Q-AnR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -938,7 +938,6 @@
         <image name="탭바333" width="38" height="41"/>
         <image name="탭바444" width="35" height="43"/>
         <image name="탭바555" width="32" height="44"/>
-        <image name="탭바최종" width="35" height="40"/>
         <image name="팔로워" width="338" height="113"/>
         <image name="평점순" width="153" height="43"/>
         <image name="프사수정" width="233" height="118"/>

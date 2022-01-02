@@ -9,7 +9,6 @@ import Foundation
 
 
 struct FoodResponse: Decodable {
-    
     let getSafeRestaurantList: GetSafeRestaurantList
 }
 

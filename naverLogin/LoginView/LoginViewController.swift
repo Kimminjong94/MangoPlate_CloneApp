@@ -52,7 +52,7 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
         loginInstance?.requestThirdPartyLogin()
             //로그인 시 다른 뷰컨트롤러로 이동
         
-        guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
+        guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "BaseTabBarViewController") as? BaseTabBarViewController else { return }
         navigation.modalPresentationStyle = .overFullScreen
         self.present(navigation, animated: true, completion: nil)
         
@@ -143,7 +143,6 @@ extension LoginViewController {
     // ✅ 이미지뷰에 제스쳐 추가
     private func setGestureRecognizer() {
 
-        
         let loginKakaoAccount = UITapGestureRecognizer(target: self, action: #selector(loginKakaoAccount))
         loginWithKakaoImageView.isUserInteractionEnabled = true
         loginWithKakaoImageView.addGestureRecognizer(loginKakaoAccount)
@@ -158,21 +157,15 @@ extension LoginViewController {
             else {
                 print("me() success.")
 
-                
                 // ✅ 사용자정보를 성공적으로 가져오면 화면전환 한다.
                 let nickname = user?.kakaoAccount?.profile?.nickname
                 
                 guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "MyInfo") as? MyInfo else { return }
-                
-                
-                
-                
-                
 
                 UDM.shared.defaults.setValue(nickname, forKey: "Key")
 
                 
-                guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else { return }
+                guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "BaseTabBarViewController") as? BaseTabBarViewController else { return }
                 navigation.modalPresentationStyle = .overFullScreen
                 self.present(navigation, animated: true, completion: nil)
             }
@@ -226,10 +219,10 @@ extension LoginViewController {
                 print("loginWithKakaoAccount() success.")
                 self.getUserInfo()
 
-                guard let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "TabBarController") as? TabBarController else{
+                guard let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "BaseTabBarViewController") as? BaseTabBarViewController else{
                     return
                 }
-                self.changeRootViewController(mainTabBarController)
+//                self.changeRootViewController(mainTabBarController)
                 
                 // ✅ 회원가입 성공 시 oauthToken 저장
                  _ = oauthToken
@@ -239,15 +232,15 @@ extension LoginViewController {
         }
     }
     
-    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
-        if let window = UIApplication.shared.windows.first {
-            window.rootViewController = viewControllerToPresent
-            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
-        } else {
-            viewControllerToPresent.modalPresentationStyle = .overFullScreen
-            self.present(viewControllerToPresent, animated: true, completion: nil)
-        }
-    }
+//    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+//        if let window = UIApplication.shared.windows.first {
+//            window.rootViewController = viewControllerToPresent
+//            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
+//        } else {
+//            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+//            self.present(viewControllerToPresent, animated: true, completion: nil)
+//        }
+//    }
 }
 
 class UDM {

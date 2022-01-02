@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class MainViewController: BaseViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var foods = [item]()
     var collectionCell = MainCollectionViewCell()
@@ -26,7 +26,6 @@ class MainViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.tintColor = .label
         configureItem()
         
         pageControl.numberOfPages = images.count
