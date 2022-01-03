@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PickViewController2: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class PickViewController2: UIViewController {
 
 
     @IBOutlet weak var tableView: UITableView!
@@ -20,8 +20,10 @@ class PickViewController2: UIViewController,UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
-
     }
+}
+
+extension PickViewController2: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return images.count
@@ -31,7 +33,6 @@ class PickViewController2: UIViewController,UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "couponCell", for: indexPath) as! PickTableViewCell
         
         cell.myImage.image = images[indexPath.row]
-        
         
         return cell
     }

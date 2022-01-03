@@ -19,25 +19,25 @@ class MyInfo: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setUI()
         
         navigationController?.navigationBar.tintColor = .label
+        tableView.register(UINib(nibName: "InfoSection", bundle: nil), forCellReuseIdentifier: "InfoSection")
+
         configureItem()
         
         tableView.tableFooterView = UIView(frame:  .zero)
-        tableView.register(UINib(nibName: "InfoSection", bundle: nil), forCellReuseIdentifier: "InfoSection")
         tableView.dataSource = self
         tableView.delegate = self
         
 
     }
+    // UserDefault -> 프로필이름 가져오기
     override func viewWillAppear(_ animated: Bool) {
         if let value = UDM.shared.defaults.value(forKey: "Key") as? String {
             kakaoProfile.text = value
         }
-
     }
-    
+    // NavigationBar
     private func configureItem() {
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(
@@ -49,6 +49,10 @@ class MyInfo: UIViewController {
         ]
     }
 }
+
+
+//MARK: - Delegate, DataSource
+
 extension MyInfo: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,15 +73,3 @@ extension MyInfo: UITableViewDelegate, UITableViewDataSource {
         return sectionCell[section].count
     }
 }
-//extension MyInfo {
-//    private func setUI() {
-//        if let nickname = kakaoNickname {
-//            self.kakaoProfile.text = "\(nickname)"
-//        }
-//        if let emial = myemail {
-//            email.text = "\(emial)님 환영합니다."
-//        } else {
-//            email.text = "이메일 정보 없음"
-//        }
-//    }
-//}

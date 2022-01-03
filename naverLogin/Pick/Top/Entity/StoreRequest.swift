@@ -11,7 +11,6 @@ import Alamofire
 struct Store: Decodable {
     let response: response
 }
-// 스트링을 넣으려고 해서 안맞다
 
 struct response: Decodable {
     let body: body
@@ -25,11 +24,5 @@ struct items: Decodable {
 struct Myitem: Decodable {
     let bsn_nm: String
     let indutype_nm: String
-}
-
-
-class StroeRequest {
-    
-
 }
 

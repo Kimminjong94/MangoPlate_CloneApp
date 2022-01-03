@@ -27,7 +27,6 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
         loginInstance?.delegate = self
         setUI()
         setGestureRecognizer()
-        
     }
     //MARK: -네이버로그인
     // 로그인에 성공한 경우 호출
@@ -91,6 +90,9 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
       }
     }
     
+    
+    //MARK: - 카카오 로그인
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
@@ -124,12 +126,9 @@ class LoginViewController: UIViewController, NaverThirdPartyLoginConnectionDeleg
     }
     
 }
-//MARK: - 카카오로그인
 
 extension LoginViewController {
-    
-    // MARK: - Methods
-    
+
     private func setUI() {
         
         // ✅ 카카오 로그인 이미지 설정
@@ -175,36 +174,6 @@ extension LoginViewController {
     // MARK: - @objc Methods
     
     // ✅ 카카오로그인 이미지에 UITapGestureRecognizer 를 등록할 때 사용할 @objc 메서드.
-    // ✅ 카카오톡으로 로그인
-    @objc
-    func loginKakao() {
-        print("loginKakao() called.")
-        
-        // ✅ 카카오톡 설치 여부 확인
-        if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoTalk() success.")
-                    
-                    // ✅ 회원가입 성공 시 oauthToken 저장
-                    let kakoOauthToken = oauthToken
-                    UserDefaults.standard.set(kakoOauthToken, forKey: "KakoOauthToken")
-                    
-                    // ✅ 사용자정보를 성공적으로 가져오면 화면전환 한다.
-                    self.getUserInfo()
-                }
-            }
-        }
-        // ✅ 카카오톡 미설치
-        else {
-            print("카카오톡 미설치")
-        }
-    }
-    
-    // ✅ 카카오로그인 이미지에 UITapGestureRecognizer 를 등록할 때 사용할 @objc 메서드.
     // ✅ 카카오계정으로 로그인
     @objc
     func loginKakaoAccount() {
@@ -222,7 +191,6 @@ extension LoginViewController {
                 guard let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "BaseTabBarViewController") as? BaseTabBarViewController else{
                     return
                 }
-//                self.changeRootViewController(mainTabBarController)
                 
                 // ✅ 회원가입 성공 시 oauthToken 저장
                  _ = oauthToken
@@ -231,22 +199,11 @@ extension LoginViewController {
             }
         }
     }
-    
-//    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
-//        if let window = UIApplication.shared.windows.first {
-//            window.rootViewController = viewControllerToPresent
-//            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
-//        } else {
-//            viewControllerToPresent.modalPresentationStyle = .overFullScreen
-//            self.present(viewControllerToPresent, animated: true, completion: nil)
-//        }
-//    }
 }
 
+//MARK: - 카카오 프로필 UserDefault에 저장
 class UDM {
     static let shared = UDM()
-    
     let defaults = UserDefaults(suiteName: "com.test.saved.data")!
-
 }
 

@@ -8,26 +8,27 @@
 import UIKit
 import Alamofire
 
-class MainViewController: BaseViewController, UIScrollViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class MainViewController: BaseViewController, UIScrollViewDelegate {
     
-    var foods = [item]()
-    var collectionCell = MainCollectionViewCell()
+
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+    var foods = [item]()
+//    var collectionCell = MainCollectionViewCell()
     var images: [String] = ["배너1", "배너2", "배너3", "배너4", "배너5", "배너6"]
-    var foodImages: [String] = ["음식1", "음식2", "음식3", "음식4", "음식5", "음식", "음식1", "음식2", "음식3", "음식4", "음식5"]
-    var foodName: [String] = []
     var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureItem()
+        //Nib Register
+        let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
+        collectionView.register(nibCell, forCellWithReuseIdentifier: "cell")
         
+        //Page Control
         pageControl.numberOfPages = images.count
         for index in 0..<images.count {
             frame.origin.x = scrollView.frame.size.width * CGFloat(index)
@@ -39,13 +40,12 @@ class MainViewController: BaseViewController, UIScrollViewDelegate, UICollection
             self.scrollView.addSubview(imgView)
         }
         scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(images.count)), height: scrollView.frame.size.height)
-        scrollView.delegate = self
         
-        let nibCell = UINib(nibName: "MainCollectionViewCell", bundle: nil)
-        collectionView.register(nibCell, forCellWithReuseIdentifier: "cell")
-        
-        FoodRequest().getFoodData(self)
+        configureItem()
+        FoodDataManager().getFoodData(self)
 
+        //Delegate
+        scrollView.delegate = self
         collectionView.dataSource = self
         collectionView.delegate = self
     }
@@ -53,6 +53,7 @@ class MainViewController: BaseViewController, UIScrollViewDelegate, UICollection
         super.viewDidLayoutSubviews()
 
     }
+    //Navigation Bar
     private func configureItem() {
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(
@@ -74,16 +75,19 @@ class MainViewController: BaseViewController, UIScrollViewDelegate, UICollection
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
         pageControl.currentPage = Int(pageNumber)
     }
+    // FoodDataManager Response
     func didSuccess(_ response: FoodResponse) {
-        
         let data = response.getSafeRestaurantList.item
         self.foods = data
-        self.collectionView.reloadData()
     }
+}
 
+//MARK: - Delegate, Datasource
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foods.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -93,5 +97,4 @@ class MainViewController: BaseViewController, UIScrollViewDelegate, UICollection
         cell.nameLabel.text = foods[indexPath.row].biz_nm
         return cell
     }
-    
 }

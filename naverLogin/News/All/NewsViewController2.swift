@@ -20,19 +20,16 @@ class NewsViewController2: UIViewController {
         "공부요 공부... 딴 건 신경 쓸 겨를도 없어요ㅠㅠ는 요즘 귀여운 냉장고 자석을 찾아보고 있어요. 잊지 말아야 할 것들을 냉장고나 현관문에 자석으로 붙여놓는데요! 알아보니 열쇠나 마스크를 걸어 놓는 고리로 된 자석도 있고, 귀여운 동물 모양, 맛있는 음식 모양 등 종류가 정말 많았어요! 놓치지 않고 장바구니로 차곡차곡 쌓이고 있답니다.",
         
         " 뭐 그야 제가 하는 모든게 다 제 관심사죠.는 요즘 귀여운 냉장고 자석을 찾아보고 있어요. 잊지 말아야 할 것들을 냉장고나 현관문에 자석으로 붙여놓는데요! 알아보니 열쇠나 마스크를 걸어 놓는 고리로 된 자석도 있고, 귀여운 동물 모양, 맛있는 음식 모양 등 종류가 정말 많았어요! 놓치지 않고 장바구니로 차곡차곡 쌓이고 있답니다.는 요즘 귀여운 냉장고 자석을 찾아보고 있어요. 잊지 말아야 할 것들을 냉장고나 현관문에 자석으로 붙여놓는데요! 알아보니 열쇠나 마스크를 걸어 놓는 고리 로 된 자석도 있고, 귀여운 동물 모양, 맛있는 음식 모양 등 종류가 정말 많았어요! 놓치지 않고 장바구니로 차곡차곡 쌓이고 있답니다."
-    
     ]
-    
     var dataSource: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
         tableView.dataSource = self
     }
-    
 }
+
+//MARK: - Datasource
 
 extension NewsViewController2: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

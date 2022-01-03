@@ -2,19 +2,7 @@
 import UIKit
 import Alamofire
 
-struct Food: Decodable {
-    var results: [results]
-}
-
-struct results: Decodable {
-    var urls: [urls]
-}
-
-struct urls: Decodable {
-    var thumb: String
-}
-
-class PickViewController3: UIViewController, UICollectionViewDataSource {
+class PickViewController3: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var foods = [urls]()
@@ -23,6 +11,9 @@ class PickViewController3: UIViewController, UICollectionViewDataSource {
         super.viewDidLoad()
         
     }
+}
+
+extension PickViewController3: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foods.count
@@ -35,6 +26,5 @@ class PickViewController3: UIViewController, UICollectionViewDataSource {
         cell.imageView.image
         return cell
     }
-
-
+    
 }

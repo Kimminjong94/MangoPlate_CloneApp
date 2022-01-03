@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		336D457314F8ED89DCBA11B6 /* Pods_naverLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753931F7EA0524751CAD6B63 /* Pods_naverLogin.framework */; };
-		5800986927747AB50027432C /* MyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986827747AB50027432C /* MyInfo.swift */; };
-		5800986B27748AAB0027432C /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986A27748AAB0027432C /* SectionCell.swift */; };
+		5800986927747AB50027432C /* MyInfoViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986827747AB50027432C /* MyInfoViewcontroller.swift */; };
 		5800986E27748AE30027432C /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986C27748AE30027432C /* InfoSection.swift */; };
 		5800986F27748AE30027432C /* InfoSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5800986D27748AE30027432C /* InfoSection.xib */; };
 		58392B632780312200A2E487 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B622780312200A2E487 /* Constant.swift */; };
@@ -38,6 +37,8 @@
 		589C37F92774222F00077218 /* FoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C37F82774222F00077218 /* FoodResponse.swift */; };
 		589C38202774540000077218 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589C381E2774540000077218 /* MainCollectionViewCell.swift */; };
 		589C38212774540000077218 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589C381F2774540000077218 /* MainCollectionViewCell.xib */; };
+		58BC6B1B2782CAC40074F442 /* StoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC6B1A2782CAC40074F442 /* StoryEntity.swift */; };
+		58BC6B1F2782CBAD0074F442 /* StoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BC6B1E2782CBAD0074F442 /* StoreDataManager.swift */; };
 		58C65029277364E800D252AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C65028277364E800D252AB /* MainViewController.swift */; };
 		58DC500127757DB600CCD5D5 /* PickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC500027757DB600CCD5D5 /* PickTableViewCell.swift */; };
 		58DC50072776004100CCD5D5 /* PickCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC50062776004100CCD5D5 /* PickCollectionViewCell.swift */; };
@@ -45,8 +46,7 @@
 
 /* Begin PBXFileReference section */
 		3F0456120AC31CC6B071B290 /* Pods-naverLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naverLogin.release.xcconfig"; path = "Target Support Files/Pods-naverLogin/Pods-naverLogin.release.xcconfig"; sourceTree = "<group>"; };
-		5800986827747AB50027432C /* MyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfo.swift; sourceTree = "<group>"; };
-		5800986A27748AAB0027432C /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
+		5800986827747AB50027432C /* MyInfoViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewcontroller.swift; sourceTree = "<group>"; };
 		5800986C27748AE30027432C /* InfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSection.swift; sourceTree = "<group>"; };
 		5800986D27748AE30027432C /* InfoSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoSection.xib; sourceTree = "<group>"; };
 		58392B622780312200A2E487 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -77,6 +77,8 @@
 		589C37F82774222F00077218 /* FoodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResponse.swift; sourceTree = "<group>"; };
 		589C381E2774540000077218 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		589C381F2774540000077218 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		58BC6B1A2782CAC40074F442 /* StoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryEntity.swift; sourceTree = "<group>"; };
+		58BC6B1E2782CBAD0074F442 /* StoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDataManager.swift; sourceTree = "<group>"; };
 		58C65028277364E800D252AB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		58DC500027757DB600CCD5D5 /* PickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickTableViewCell.swift; sourceTree = "<group>"; };
 		58DC50062776004100CCD5D5 /* PickCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -99,12 +101,64 @@
 		5800987027748C780027432C /* Info */ = {
 			isa = PBXGroup;
 			children = (
-				5800986827747AB50027432C /* MyInfo.swift */,
-				5800986C27748AE30027432C /* InfoSection.swift */,
-				5800986D27748AE30027432C /* InfoSection.xib */,
-				5800986A27748AAB0027432C /* SectionCell.swift */,
+				58BC6B202782CE5F0074F442 /* InfoCell */,
+				5800986827747AB50027432C /* MyInfoViewcontroller.swift */,
 			);
 			path = Info;
+			sourceTree = "<group>";
+		};
+		5810E95F2782C4B4001680F7 /* StoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				586C6E8127775D820008B9BD /* StoreCell.swift */,
+			);
+			path = StoreCell;
+			sourceTree = "<group>";
+		};
+		5810E9602782C4BE001680F7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				586C6E7F277752F50008B9BD /* StoreRequest.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5810E9612782C732001680F7 /* Tabman */ = {
+			isa = PBXGroup;
+			children = (
+				5891FA512774981A008610A5 /* PickViewController.swift */,
+			);
+			path = Tabman;
+			sourceTree = "<group>";
+		};
+		5810E9622782C79B001680F7 /* EatDeal */ = {
+			isa = PBXGroup;
+			children = (
+				58BC6B192782C9C30074F442 /* CollectionViewCell */,
+				5891FA532774982E008610A5 /* PickViewController2.swift */,
+			);
+			path = EatDeal;
+			sourceTree = "<group>";
+		};
+		5810E9632782C7BB001680F7 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				58BC6B1C2782CAD40074F442 /* Entity */,
+				58BC6B182782C9A80074F442 /* CollectionViewCell */,
+				5891FA5527749838008610A5 /* PickViewController3.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		5810E9642782C7CB001680F7 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				58BC6B1D2782CB930074F442 /* StoreDataManager */,
+				5810E9602782C4BE001680F7 /* Entity */,
+				5810E95F2782C4B4001680F7 /* StoreCell */,
+				5896B77827749CB100E1FF3D /* PickViewController4.swift */,
+			);
+			path = Top;
 			sourceTree = "<group>";
 		};
 		58392B612780310100A2E487 /* Configuration */ = {
@@ -141,13 +195,13 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
-		583E622C278194B700A20FD9 /* Store */ = {
+		583E622C278194B700A20FD9 /* StoreCell */ = {
 			isa = PBXGroup;
 			children = (
 				589C381F2774540000077218 /* MainCollectionViewCell.xib */,
 				589C381E2774540000077218 /* MainCollectionViewCell.swift */,
 			);
-			path = Store;
+			path = StoreCell;
 			sourceTree = "<group>";
 		};
 		588BD1E227733BBE001E6BA8 = {
@@ -173,9 +227,9 @@
 			children = (
 				588BD1F427733BBF001E6BA8 /* Main.storyboard */,
 				58392B612780310100A2E487 /* Configuration */,
-				589C38232774573800077218 /* LoginView */,
-				589C38222774572200077218 /* MainCollectionView */,
-				5891FA5727749C5C008610A5 /* PickView */,
+				589C38232774573800077218 /* Login */,
+				589C38222774572200077218 /* Main */,
+				5891FA5727749C5C008610A5 /* Pick */,
 				5800987027748C780027432C /* Info */,
 				5896B78227749E1D00E1FF3D /* News */,
 				58392B682780357200A2E487 /* Plus */,
@@ -188,51 +242,45 @@
 			path = naverLogin;
 			sourceTree = "<group>";
 		};
-		5891FA5727749C5C008610A5 /* PickView */ = {
+		5891FA5727749C5C008610A5 /* Pick */ = {
 			isa = PBXGroup;
 			children = (
-				5891FA512774981A008610A5 /* PickViewController.swift */,
-				5891FA532774982E008610A5 /* PickViewController2.swift */,
-				58DC500027757DB600CCD5D5 /* PickTableViewCell.swift */,
-				5891FA5527749838008610A5 /* PickViewController3.swift */,
-				58DC50062776004100CCD5D5 /* PickCollectionViewCell.swift */,
-				5896B77827749CB100E1FF3D /* PickViewController4.swift */,
-				586C6E8127775D820008B9BD /* StoreCell.swift */,
-				586C6E7F277752F50008B9BD /* StoreRequest.swift */,
+				5810E9612782C732001680F7 /* Tabman */,
+				5810E9622782C79B001680F7 /* EatDeal */,
+				5810E9632782C7BB001680F7 /* Story */,
+				5810E9642782C7CB001680F7 /* Top */,
 			);
-			path = PickView;
+			path = Pick;
 			sourceTree = "<group>";
 		};
 		5896B78227749E1D00E1FF3D /* News */ = {
 			isa = PBXGroup;
 			children = (
-				5896B77A27749DF300E1FF3D /* NewsViewController.swift */,
-				5896B77C27749E0A00E1FF3D /* NewsViewController2.swift */,
-				5896B7832774A8A200E1FF3D /* SelfSizeingTableViewCell.swift */,
-				5896B77E27749E1200E1FF3D /* NewsViewController3.swift */,
-				5896B78027749E1900E1FF3D /* NewsViewController4.swift */,
-				5896B7852774C7D400E1FF3D /* SelfSizing2.swift */,
+				58BC6B212782CF730074F442 /* Tabman */,
+				58BC6B222782CFB40074F442 /* All */,
+				58BC6B232782CFC10074F442 /* Following */,
+				58BC6B242782CFCF0074F442 /* Holic */,
 			);
 			path = News;
 			sourceTree = "<group>";
 		};
-		589C38222774572200077218 /* MainCollectionView */ = {
+		589C38222774572200077218 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				589C38242774574F00077218 /* FoodDataManager */,
 				583E622B278191AC00A20FD9 /* Entity */,
-				583E622C278194B700A20FD9 /* Store */,
+				583E622C278194B700A20FD9 /* StoreCell */,
 				58C65028277364E800D252AB /* MainViewController.swift */,
 			);
-			path = MainCollectionView;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		589C38232774573800077218 /* LoginView */ = {
+		589C38232774573800077218 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				588BD1F227733BBF001E6BA8 /* LoginViewController.swift */,
 			);
-			path = LoginView;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		589C38242774574F00077218 /* FoodDataManager */ = {
@@ -241,6 +289,97 @@
 				589C37F6277420C800077218 /* FoodDataManager.swift */,
 			);
 			path = FoodDataManager;
+			sourceTree = "<group>";
+		};
+		58BC6B182782C9A80074F442 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				58DC50062776004100CCD5D5 /* PickCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		58BC6B192782C9C30074F442 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				58DC500027757DB600CCD5D5 /* PickTableViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		58BC6B1C2782CAD40074F442 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				58BC6B1A2782CAC40074F442 /* StoryEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		58BC6B1D2782CB930074F442 /* StoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				58BC6B1E2782CBAD0074F442 /* StoreDataManager.swift */,
+			);
+			path = StoreDataManager;
+			sourceTree = "<group>";
+		};
+		58BC6B202782CE5F0074F442 /* InfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				5800986C27748AE30027432C /* InfoSection.swift */,
+				5800986D27748AE30027432C /* InfoSection.xib */,
+			);
+			path = InfoCell;
+			sourceTree = "<group>";
+		};
+		58BC6B212782CF730074F442 /* Tabman */ = {
+			isa = PBXGroup;
+			children = (
+				5896B77A27749DF300E1FF3D /* NewsViewController.swift */,
+			);
+			path = Tabman;
+			sourceTree = "<group>";
+		};
+		58BC6B222782CFB40074F442 /* All */ = {
+			isa = PBXGroup;
+			children = (
+				58BC6B252782CFE90074F442 /* TableViewCell */,
+				5896B77C27749E0A00E1FF3D /* NewsViewController2.swift */,
+			);
+			path = All;
+			sourceTree = "<group>";
+		};
+		58BC6B232782CFC10074F442 /* Following */ = {
+			isa = PBXGroup;
+			children = (
+				5896B77E27749E1200E1FF3D /* NewsViewController3.swift */,
+			);
+			path = Following;
+			sourceTree = "<group>";
+		};
+		58BC6B242782CFCF0074F442 /* Holic */ = {
+			isa = PBXGroup;
+			children = (
+				58BC6B262782D0210074F442 /* TableViewCell */,
+				5896B78027749E1900E1FF3D /* NewsViewController4.swift */,
+			);
+			path = Holic;
+			sourceTree = "<group>";
+		};
+		58BC6B252782CFE90074F442 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5896B7832774A8A200E1FF3D /* SelfSizeingTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		58BC6B262782D0210074F442 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5896B7852774C7D400E1FF3D /* SelfSizing2.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		790BF6EB4148479464A7BEB6 /* Pods */ = {
@@ -380,12 +519,12 @@
 				586C6E80277752F50008B9BD /* StoreRequest.swift in Sources */,
 				5896B78127749E1900E1FF3D /* NewsViewController4.swift in Sources */,
 				5800986E27748AE30027432C /* InfoSection.swift in Sources */,
-				5800986927747AB50027432C /* MyInfo.swift in Sources */,
+				5800986927747AB50027432C /* MyInfoViewcontroller.swift in Sources */,
 				58DC50072776004100CCD5D5 /* PickCollectionViewCell.swift in Sources */,
 				58392B66278031E100A2E487 /* BaseTabBarViewController.swift in Sources */,
 				5891FA5627749838008610A5 /* PickViewController3.swift in Sources */,
 				589C37F92774222F00077218 /* FoodResponse.swift in Sources */,
-				5800986B27748AAB0027432C /* SectionCell.swift in Sources */,
+				58BC6B1B2782CAC40074F442 /* StoryEntity.swift in Sources */,
 				5896B7842774A8A200E1FF3D /* SelfSizeingTableViewCell.swift in Sources */,
 				58392B632780312200A2E487 /* Constant.swift in Sources */,
 				5896B77927749CB100E1FF3D /* PickViewController4.swift in Sources */,
@@ -403,6 +542,7 @@
 				588BD1F127733BBF001E6BA8 /* SceneDelegate.swift in Sources */,
 				586C6E8227775D820008B9BD /* StoreCell.swift in Sources */,
 				58C65029277364E800D252AB /* MainViewController.swift in Sources */,
+				58BC6B1F2782CBAD0074F442 /* StoreDataManager.swift in Sources */,
 				5896B77B27749DF300E1FF3D /* NewsViewController.swift in Sources */,
 				583E622A27817ADA00A20FD9 /* BaseViewController.swift in Sources */,
 			);
