@@ -17,6 +17,15 @@
 		583E622A27817ADA00A20FD9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583E622927817ADA00A20FD9 /* BaseViewController.swift */; };
 		586C6E80277752F50008B9BD /* StoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C6E7F277752F50008B9BD /* StoreRequest.swift */; };
 		586C6E8227775D820008B9BD /* StoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C6E8127775D820008B9BD /* StoreCell.swift */; };
+		587A71612782E6CB006D5B79 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A71602782E6CB006D5B79 /* IndicatorView.swift */; };
+		587A71632782E6F0006D5B79 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A71622782E6F0006D5B79 /* Device.swift */; };
+		587A71662782E714006D5B79 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A71652782E714006D5B79 /* Date.swift */; };
+		587A71682782E725006D5B79 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A71672782E725006D5B79 /* String.swift */; };
+		587A716A2782E73B006D5B79 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A71692782E73B006D5B79 /* UIColor.swift */; };
+		587A716C2782E74E006D5B79 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A716B2782E74E006D5B79 /* UIFont.swift */; };
+		587A716E2782E79A006D5B79 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A716D2782E79A006D5B79 /* UIButton.swift */; };
+		587A71702782E7AB006D5B79 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A716F2782E7AB006D5B79 /* UIViewController.swift */; };
+		587A71722782E807006D5B79 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A71712782E807006D5B79 /* UINavigationBar.swift */; };
 		588BD1EF27733BBF001E6BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1EE27733BBF001E6BA8 /* AppDelegate.swift */; };
 		588BD1F127733BBF001E6BA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1F027733BBF001E6BA8 /* SceneDelegate.swift */; };
 		588BD1F327733BBF001E6BA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1F227733BBF001E6BA8 /* LoginViewController.swift */; };
@@ -55,6 +64,15 @@
 		583E622927817ADA00A20FD9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		586C6E7F277752F50008B9BD /* StoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreRequest.swift; sourceTree = "<group>"; };
 		586C6E8127775D820008B9BD /* StoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCell.swift; sourceTree = "<group>"; };
+		587A71602782E6CB006D5B79 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		587A71622782E6F0006D5B79 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		587A71652782E714006D5B79 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		587A71672782E725006D5B79 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		587A71692782E73B006D5B79 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		587A716B2782E74E006D5B79 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		587A716D2782E79A006D5B79 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		587A716F2782E7AB006D5B79 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		587A71712782E807006D5B79 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		588BD1EB27733BBF001E6BA8 /* naverLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naverLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588BD1EE27733BBF001E6BA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		588BD1F027733BBF001E6BA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +222,30 @@
 			path = StoreCell;
 			sourceTree = "<group>";
 		};
+		587A715F2782E6B5006D5B79 /* Utill */ = {
+			isa = PBXGroup;
+			children = (
+				587A71602782E6CB006D5B79 /* IndicatorView.swift */,
+				587A71622782E6F0006D5B79 /* Device.swift */,
+				587A71642782E70B006D5B79 /* Extension */,
+			);
+			path = Utill;
+			sourceTree = "<group>";
+		};
+		587A71642782E70B006D5B79 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				587A71652782E714006D5B79 /* Date.swift */,
+				587A71672782E725006D5B79 /* String.swift */,
+				587A71692782E73B006D5B79 /* UIColor.swift */,
+				587A716B2782E74E006D5B79 /* UIFont.swift */,
+				587A716D2782E79A006D5B79 /* UIButton.swift */,
+				587A716F2782E7AB006D5B79 /* UIViewController.swift */,
+				587A71712782E807006D5B79 /* UINavigationBar.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		588BD1E227733BBE001E6BA8 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +269,7 @@
 			children = (
 				588BD1F427733BBF001E6BA8 /* Main.storyboard */,
 				58392B612780310100A2E487 /* Configuration */,
+				587A715F2782E6B5006D5B79 /* Utill */,
 				589C38232774573800077218 /* Login */,
 				589C38222774572200077218 /* Main */,
 				5891FA5727749C5C008610A5 /* Pick */,
@@ -519,24 +562,32 @@
 				586C6E80277752F50008B9BD /* StoreRequest.swift in Sources */,
 				5896B78127749E1900E1FF3D /* NewsViewController4.swift in Sources */,
 				5800986E27748AE30027432C /* InfoSection.swift in Sources */,
+				587A716C2782E74E006D5B79 /* UIFont.swift in Sources */,
+				587A71662782E714006D5B79 /* Date.swift in Sources */,
 				5800986927747AB50027432C /* MyInfoViewcontroller.swift in Sources */,
+				587A71612782E6CB006D5B79 /* IndicatorView.swift in Sources */,
 				58DC50072776004100CCD5D5 /* PickCollectionViewCell.swift in Sources */,
 				58392B66278031E100A2E487 /* BaseTabBarViewController.swift in Sources */,
 				5891FA5627749838008610A5 /* PickViewController3.swift in Sources */,
 				589C37F92774222F00077218 /* FoodResponse.swift in Sources */,
 				58BC6B1B2782CAC40074F442 /* StoryEntity.swift in Sources */,
 				5896B7842774A8A200E1FF3D /* SelfSizeingTableViewCell.swift in Sources */,
+				587A71722782E807006D5B79 /* UINavigationBar.swift in Sources */,
+				587A71682782E725006D5B79 /* String.swift in Sources */,
 				58392B632780312200A2E487 /* Constant.swift in Sources */,
 				5896B77927749CB100E1FF3D /* PickViewController4.swift in Sources */,
 				5896B77F27749E1200E1FF3D /* NewsViewController3.swift in Sources */,
 				58392B6A2780359700A2E487 /* PlusViewController.swift in Sources */,
 				588BD1F327733BBF001E6BA8 /* LoginViewController.swift in Sources */,
 				5896B7862774C7D400E1FF3D /* SelfSizing2.swift in Sources */,
+				587A71632782E6F0006D5B79 /* Device.swift in Sources */,
 				589C38202774540000077218 /* MainCollectionViewCell.swift in Sources */,
 				589C37F7277420C800077218 /* FoodDataManager.swift in Sources */,
 				588BD1EF27733BBF001E6BA8 /* AppDelegate.swift in Sources */,
+				587A716A2782E73B006D5B79 /* UIColor.swift in Sources */,
 				5891FA522774981A008610A5 /* PickViewController.swift in Sources */,
 				58DC500127757DB600CCD5D5 /* PickTableViewCell.swift in Sources */,
+				587A71702782E7AB006D5B79 /* UIViewController.swift in Sources */,
 				5891FA542774982E008610A5 /* PickViewController2.swift in Sources */,
 				5896B77D27749E0A00E1FF3D /* NewsViewController2.swift in Sources */,
 				588BD1F127733BBF001E6BA8 /* SceneDelegate.swift in Sources */,
@@ -545,6 +596,7 @@
 				58BC6B1F2782CBAD0074F442 /* StoreDataManager.swift in Sources */,
 				5896B77B27749DF300E1FF3D /* NewsViewController.swift in Sources */,
 				583E622A27817ADA00A20FD9 /* BaseViewController.swift in Sources */,
+				587A716E2782E79A006D5B79 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

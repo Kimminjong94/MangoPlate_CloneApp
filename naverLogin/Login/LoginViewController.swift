@@ -163,7 +163,6 @@ extension LoginViewController {
 
                 UDM.shared.defaults.setValue(nickname, forKey: "Key")
 
-                
                 guard let navigation = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "BaseTabBarViewController") as? BaseTabBarViewController else { return }
                 navigation.modalPresentationStyle = .overFullScreen
                 self.present(navigation, animated: true, completion: nil)

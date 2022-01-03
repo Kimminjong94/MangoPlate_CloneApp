@@ -10,8 +10,6 @@ import Alamofire
 
 class MainViewController: BaseViewController, UIScrollViewDelegate {
     
-
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
