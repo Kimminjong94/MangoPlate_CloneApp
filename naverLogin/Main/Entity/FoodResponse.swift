@@ -18,7 +18,7 @@ struct GetSafeRestaurantList: Decodable {
 }
 
 struct item: Decodable {
-    let biz_nm: String
+    let biz_nm: String?
 }
 
 

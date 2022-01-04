@@ -14,8 +14,6 @@ class BaseViewController: UIViewController {
         
         self.navigationController?.navigationBar.tintColor = .label
         self.view.backgroundColor = .white
-        
-
     }
 
 

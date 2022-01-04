@@ -15,9 +15,9 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var foods = [item]()
-//    var collectionCell = MainCollectionViewCell()
     var images: [String] = ["배너1", "배너2", "배너3", "배너4", "배너5", "배너6"]
     var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+    var foodImages: [String] = ["음식1", "음식2", "음식3", "음식4", "음식5", "음식1", "음식2", "음식3", "음식4", "음식5"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,6 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
     }
     //Navigation Bar
     private func configureItem() {
@@ -77,12 +76,13 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
     func didSuccess(_ response: FoodResponse) {
         let data = response.getSafeRestaurantList.item
         self.foods = data
+        self.collectionView.reloadData()
     }
 }
 
 //MARK: - Delegate, Datasource
 
-extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return foods.count
@@ -91,8 +91,21 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MainCollectionViewCell
-        
         cell.nameLabel.text = foods[indexPath.row].biz_nm
+        cell.image.image = UIImage(named: "\(foodImages[indexPath.row])")
+        
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("click\(indexPath.row)")
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        vc?.restaurantId = self.foods[indexPath.row].biz_nm!
+        vc?.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.collectionView.bounds.width / 2, height: 240)
+    }
+    
 }
