@@ -35,22 +35,33 @@ class PickViewController: TabmanViewController {
         addBar(bar, dataSource: self, at: .top)
         
         bar.backgroundView.style = .blur(style: .regular)
-        bar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 20.0)
+        bar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
         
-        bar.indicator.weight = .heavy
+        bar.indicator.weight = .medium
         bar.indicator.tintColor = .orange
         bar.indicator.overscrollBehavior = .compress
         bar.indicator.overscrollBehavior = .bounce
+//        bar.layout.alignment = .centerDistributed
+        bar.layout.contentMode = .fit
+        bar.layout.interButtonSpacing = 10
+        bar.backgroundColor = .white
 
     }
 }
 
 extension PickViewController: PageboyViewControllerDataSource, TMBarDataSource {
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
-        let item = TMBarItem(title: "")
-        item.title = "EAT딜 \(index)"
-        item.image = UIImage(named: "image.png")
-        return item
+        switch index {
+        case 0:
+            return TMBarItem(title: "Eat딜")
+        case 1:
+            return TMBarItem(title: "스토리")
+        case 2:
+            return TMBarItem(title: "Top 리스트")
+        default:
+            let title = "Page \(index)"
+            return TMBarItem(title: title)
+        }
     }
     
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {

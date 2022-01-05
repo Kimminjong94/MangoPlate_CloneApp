@@ -11,7 +11,8 @@
 		5800986927747AB50027432C /* MyInfoViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986827747AB50027432C /* MyInfoViewcontroller.swift */; };
 		5800986E27748AE30027432C /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5800986C27748AE30027432C /* InfoSection.swift */; };
 		5800986F27748AE30027432C /* InfoSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5800986D27748AE30027432C /* InfoSection.xib */; };
-		58057E7127840E870086B0E6 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58057E7027840E870086B0E6 /* View.xib */; };
+		58057E742784399F0086B0E6 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58057E722784399F0086B0E6 /* BannerCollectionViewCell.swift */; };
+		58057E752784399F0086B0E6 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58057E732784399F0086B0E6 /* BannerCollectionViewCell.xib */; };
 		58392B632780312200A2E487 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B622780312200A2E487 /* Constant.swift */; };
 		58392B66278031E100A2E487 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B65278031E100A2E487 /* BaseTabBarViewController.swift */; };
 		58392B6A2780359700A2E487 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B692780359700A2E487 /* PlusViewController.swift */; };
@@ -29,6 +30,9 @@
 		587A716E2782E79A006D5B79 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A716D2782E79A006D5B79 /* UIButton.swift */; };
 		587A71702782E7AB006D5B79 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A716F2782E7AB006D5B79 /* UIViewController.swift */; };
 		587A71722782E807006D5B79 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587A71712782E807006D5B79 /* UINavigationBar.swift */; };
+		587AD8042785552B00785D2B /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587AD8032785552B00785D2B /* EventViewController.swift */; };
+		587AD8072785555300785D2B /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587AD8052785555300785D2B /* EventCollectionViewCell.swift */; };
+		587AD8082785555300785D2B /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587AD8062785555300785D2B /* EventCollectionViewCell.xib */; };
 		588BD1EF27733BBF001E6BA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1EE27733BBF001E6BA8 /* AppDelegate.swift */; };
 		588BD1F127733BBF001E6BA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1F027733BBF001E6BA8 /* SceneDelegate.swift */; };
 		588BD1F327733BBF001E6BA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588BD1F227733BBF001E6BA8 /* LoginViewController.swift */; };
@@ -62,7 +66,8 @@
 		5800986827747AB50027432C /* MyInfoViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewcontroller.swift; sourceTree = "<group>"; };
 		5800986C27748AE30027432C /* InfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSection.swift; sourceTree = "<group>"; };
 		5800986D27748AE30027432C /* InfoSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoSection.xib; sourceTree = "<group>"; };
-		58057E7027840E870086B0E6 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		58057E722784399F0086B0E6 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		58057E732784399F0086B0E6 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		58392B622780312200A2E487 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		58392B65278031E100A2E487 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		58392B692780359700A2E487 /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +85,9 @@
 		587A716D2782E79A006D5B79 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		587A716F2782E7AB006D5B79 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		587A71712782E807006D5B79 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		587AD8032785552B00785D2B /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		587AD8052785555300785D2B /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		587AD8062785555300785D2B /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
 		588BD1EB27733BBF001E6BA8 /* naverLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naverLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		588BD1EE27733BBF001E6BA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		588BD1F027733BBF001E6BA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +139,15 @@
 				5800986827747AB50027432C /* MyInfoViewcontroller.swift */,
 			);
 			path = Info;
+			sourceTree = "<group>";
+		};
+		58057E76278439A50086B0E6 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				58057E732784399F0086B0E6 /* BannerCollectionViewCell.xib */,
+				58057E722784399F0086B0E6 /* BannerCollectionViewCell.swift */,
+			);
+			path = Banner;
 			sourceTree = "<group>";
 		};
 		5810E95F2782C4B4001680F7 /* StoreCell */ = {
@@ -235,7 +252,6 @@
 			children = (
 				585E7F6D2783F34100204944 /* StoreImageCollectionViewCell.swift */,
 				585E7F6E2783F34100204944 /* StoreImageCollectionViewCell.xib */,
-				58057E7027840E870086B0E6 /* View.xib */,
 			);
 			path = StoreImageCell;
 			sourceTree = "<group>";
@@ -262,6 +278,24 @@
 				587A71712782E807006D5B79 /* UINavigationBar.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		587AD802278554E900785D2B /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				587AD8092785555700785D2B /* EventCell */,
+				587AD8032785552B00785D2B /* EventViewController.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		587AD8092785555700785D2B /* EventCell */ = {
+			isa = PBXGroup;
+			children = (
+				587AD8052785555300785D2B /* EventCollectionViewCell.swift */,
+				587AD8062785555300785D2B /* EventCollectionViewCell.xib */,
+			);
+			path = EventCell;
 			sourceTree = "<group>";
 		};
 		588BD1E227733BBE001E6BA8 = {
@@ -291,6 +325,7 @@
 				589C38232774573800077218 /* Login */,
 				589C38222774572200077218 /* Main */,
 				58A394D927831EB700AD1794 /* Detail */,
+				587AD802278554E900785D2B /* Event */,
 				5891FA5727749C5C008610A5 /* Pick */,
 				5800987027748C780027432C /* Info */,
 				5896B78227749E1D00E1FF3D /* News */,
@@ -332,6 +367,7 @@
 				589C38242774574F00077218 /* FoodDataManager */,
 				583E622B278191AC00A20FD9 /* Entity */,
 				583E622C278194B700A20FD9 /* StoreCell */,
+				58057E76278439A50086B0E6 /* Banner */,
 				58C65028277364E800D252AB /* MainViewController.swift */,
 			);
 			path = Main;
@@ -530,11 +566,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58057E7127840E870086B0E6 /* View.xib in Resources */,
 				585E7F702783F34100204944 /* StoreImageCollectionViewCell.xib in Resources */,
+				58057E752784399F0086B0E6 /* BannerCollectionViewCell.xib in Resources */,
 				588BD1FB27733BBF001E6BA8 /* LaunchScreen.storyboard in Resources */,
 				588BD1F827733BBF001E6BA8 /* Assets.xcassets in Resources */,
 				588BD1F627733BBF001E6BA8 /* Main.storyboard in Resources */,
+				587AD8082785555300785D2B /* EventCollectionViewCell.xib in Resources */,
 				589C38212774540000077218 /* MainCollectionViewCell.xib in Resources */,
 				5800986F27748AE30027432C /* InfoSection.xib in Resources */,
 			);
@@ -600,6 +637,7 @@
 				58DC50072776004100CCD5D5 /* PickCollectionViewCell.swift in Sources */,
 				58392B66278031E100A2E487 /* BaseTabBarViewController.swift in Sources */,
 				5891FA5627749838008610A5 /* PickViewController3.swift in Sources */,
+				58057E742784399F0086B0E6 /* BannerCollectionViewCell.swift in Sources */,
 				589C37F92774222F00077218 /* FoodResponse.swift in Sources */,
 				58BC6B1B2782CAC40074F442 /* StoryEntity.swift in Sources */,
 				5896B7842774A8A200E1FF3D /* SelfSizeingTableViewCell.swift in Sources */,
@@ -609,8 +647,10 @@
 				5896B77927749CB100E1FF3D /* PickViewController4.swift in Sources */,
 				5896B77F27749E1200E1FF3D /* NewsViewController3.swift in Sources */,
 				58392B6A2780359700A2E487 /* PlusViewController.swift in Sources */,
+				587AD8072785555300785D2B /* EventCollectionViewCell.swift in Sources */,
 				588BD1F327733BBF001E6BA8 /* LoginViewController.swift in Sources */,
 				5896B7862774C7D400E1FF3D /* SelfSizing2.swift in Sources */,
+				587AD8042785552B00785D2B /* EventViewController.swift in Sources */,
 				587A71632782E6F0006D5B79 /* Device.swift in Sources */,
 				589C38202774540000077218 /* MainCollectionViewCell.swift in Sources */,
 				589C37F7277420C800077218 /* FoodDataManager.swift in Sources */,

@@ -10,33 +10,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="gLN-F4-ZuP" customClass="StoreImageCollectionViewCell" customModule="naverLogin" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="BannerCollectionViewCell" id="gGG-OG-zeO" customClass="BannerCollectionViewCell" customModule="naverLogin" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="음식3" translatesAutoresizingMaskIntoConstraints="NO" id="Ibh-Me-Yrj">
-                    <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="배너1" translatesAutoresizingMaskIntoConstraints="NO" id="EIs-M2-dLq">
+                    <rect key="frame" x="0.0" y="44" width="414" height="150"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="nqO-xF-0Ql"/>
+                        <constraint firstAttribute="height" constant="150" id="EV1-Gk-oGR"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="hrr-bx-hmj"/>
+            <viewLayoutGuide key="safeArea" id="PlA-yc-XIv"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Ibh-Me-Yrj" firstAttribute="leading" secondItem="hrr-bx-hmj" secondAttribute="leading" id="3OR-bo-doK"/>
-                <constraint firstItem="Ibh-Me-Yrj" firstAttribute="top" secondItem="hrr-bx-hmj" secondAttribute="top" id="3Pe-07-Z2x"/>
-                <constraint firstItem="hrr-bx-hmj" firstAttribute="trailing" secondItem="Ibh-Me-Yrj" secondAttribute="trailing" id="gaH-Qj-J0U"/>
+                <constraint firstItem="PlA-yc-XIv" firstAttribute="trailing" secondItem="EIs-M2-dLq" secondAttribute="trailing" id="580-xb-IQf"/>
+                <constraint firstItem="EIs-M2-dLq" firstAttribute="top" secondItem="PlA-yc-XIv" secondAttribute="top" id="gdW-wH-7YR"/>
+                <constraint firstItem="EIs-M2-dLq" firstAttribute="leading" secondItem="PlA-yc-XIv" secondAttribute="leading" id="jfZ-di-PkH"/>
             </constraints>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <connections>
-                <outlet property="storeImg" destination="Ibh-Me-Yrj" id="K28-tC-6hz"/>
+                <outlet property="bannerImg" destination="EIs-M2-dLq" id="Lme-Ey-iBk"/>
             </connections>
-            <point key="canvasLocation" x="702.89855072463774" y="115.84821428571428"/>
+            <point key="canvasLocation" x="239" y="23"/>
         </view>
     </objects>
     <resources>
-        <image name="음식3" width="556" height="559"/>
+        <image name="배너1" width="1170" height="440"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

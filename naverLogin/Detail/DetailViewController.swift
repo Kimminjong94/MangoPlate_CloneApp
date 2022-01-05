@@ -26,8 +26,15 @@ class DetailViewController: UIViewController {
         
         self.storeImageCollectionView.register(UINib(nibName: "StoreImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "StoreImageCollectionViewCell")
         //뷰만들기해서 뷰를따로만들고 셀의구성으로 하고 셀의 파일
-            // view
 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
     }
 }
 
@@ -42,7 +49,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return cell!
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 150)
+        return CGSize(width: self.storeImageCollectionView.bounds.width / 2, height: 200)
     }
     //프레임은 어떠한기기든 보이는 방식이다. 가로길이 세로 길이 기기대응해서 오토레이아웃으로 변경하기
     

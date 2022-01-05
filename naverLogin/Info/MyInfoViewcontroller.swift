@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyInfo: UIViewController {
+class MyInfo: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var kakaoProfile: UILabel!
