@@ -13,6 +13,8 @@
 		5800986F27748AE30027432C /* InfoSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5800986D27748AE30027432C /* InfoSection.xib */; };
 		58057E742784399F0086B0E6 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58057E722784399F0086B0E6 /* BannerCollectionViewCell.swift */; };
 		58057E752784399F0086B0E6 /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58057E732784399F0086B0E6 /* BannerCollectionViewCell.xib */; };
+		58327AC32785C5F000D5BA1B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58327AC12785C5F000D5BA1B /* SplashViewController.swift */; };
+		58327AC42785C5F000D5BA1B /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58327AC22785C5F000D5BA1B /* SplashViewController.xib */; };
 		58392B632780312200A2E487 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B622780312200A2E487 /* Constant.swift */; };
 		58392B66278031E100A2E487 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B65278031E100A2E487 /* BaseTabBarViewController.swift */; };
 		58392B6A2780359700A2E487 /* PlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58392B692780359700A2E487 /* PlusViewController.swift */; };
@@ -68,6 +70,8 @@
 		5800986D27748AE30027432C /* InfoSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoSection.xib; sourceTree = "<group>"; };
 		58057E722784399F0086B0E6 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		58057E732784399F0086B0E6 /* BannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		58327AC12785C5F000D5BA1B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		58327AC22785C5F000D5BA1B /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		58392B622780312200A2E487 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		58392B65278031E100A2E487 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		58392B692780359700A2E487 /* PlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +208,15 @@
 			path = Top;
 			sourceTree = "<group>";
 		};
+		58327AC02785C5C700D5BA1B /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				58327AC12785C5F000D5BA1B /* SplashViewController.swift */,
+				58327AC22785C5F000D5BA1B /* SplashViewController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		58392B612780310100A2E487 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +335,7 @@
 				588BD1F427733BBF001E6BA8 /* Main.storyboard */,
 				58392B612780310100A2E487 /* Configuration */,
 				587A715F2782E6B5006D5B79 /* Utill */,
+				58327AC02785C5C700D5BA1B /* Splash */,
 				589C38232774573800077218 /* Login */,
 				589C38222774572200077218 /* Main */,
 				58A394D927831EB700AD1794 /* Detail */,
@@ -567,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				585E7F702783F34100204944 /* StoreImageCollectionViewCell.xib in Resources */,
+				58327AC42785C5F000D5BA1B /* SplashViewController.xib in Resources */,
 				58057E752784399F0086B0E6 /* BannerCollectionViewCell.xib in Resources */,
 				588BD1FB27733BBF001E6BA8 /* LaunchScreen.storyboard in Resources */,
 				588BD1F827733BBF001E6BA8 /* Assets.xcassets in Resources */,
@@ -669,6 +684,7 @@
 				5896B77B27749DF300E1FF3D /* NewsViewController.swift in Sources */,
 				583E622A27817ADA00A20FD9 /* BaseViewController.swift in Sources */,
 				587A716E2782E79A006D5B79 /* UIButton.swift in Sources */,
+				58327AC32785C5F000D5BA1B /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

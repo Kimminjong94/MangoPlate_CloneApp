@@ -21,7 +21,7 @@ class FoodDataManager {
                 switch response.result {
                 case .success(let result):
                     debugPrint(response)
-                    print("debud resonse\(response)")
+                    print("debug resonse\(response)")
                     viewController.didSuccess(result)
 //                    viewController.collectionView.reloadData()
                     //메소드를 구현 후 그시점에서 reloaddata

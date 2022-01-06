@@ -15,6 +15,10 @@ class PickViewController4: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var stores = [Myitem]()
+    var recordsArray:[Int] = Array()
+    
+    var limit = 20
+    let totalEnteries = 40
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,13 @@ class PickViewController4: UIViewController {
         StoreDataManager().getStoreData(self)
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        var index = 0
+        while index < limit {
+            recordsArray.append(index)
+            index = index + 1
+        }
+        
     }
     
     func didSuccess(_ response: Store) {
@@ -36,8 +47,9 @@ class PickViewController4: UIViewController {
 extension PickViewController4: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return stores.count
+        return recordsArray.count
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCell
@@ -46,5 +58,26 @@ extension PickViewController4: UICollectionViewDataSource, UICollectionViewDeleg
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row == recordsArray.count - 1{
+            if recordsArray.count < totalEnteries {
+                
+                var index = recordsArray.count
+                limit = index + 20
+                while index < limit {
+                    recordsArray.append(index)
+                    index = index + 1
+                    
+                    
+                }
+                self.perform(#selector(loadTable), with: nil, afterDelay:  1.0)
+                
+            }
+        }
+    }
+    @objc func loadTable() {
+        self.collectionView.reloadData()
+    }
+        
 }
 
